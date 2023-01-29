@@ -8,27 +8,18 @@ import {
   ActivityIndicator,
   TextInput,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
-import {Icon} from 'react-native-elements';
+import {Icon, Slider} from 'react-native-elements';
 import {RightOfHeader} from '../assets/components/rightOfHeader';
 
 import Pdf from 'react-native-pdf';
 import {useSelector, useDispatch} from 'react-redux';
 import {setAngNum} from '../redux/actions';
 import {allColors} from '../assets/styleForEachOption';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import {getItemFromFullPath} from '../assets/helper_funcs.js';
 import {PdfInfoModal} from '../assets/components/add_or_del_item_Modal.js';
 import {isPortrait} from './utils.js';
-
-const alertMsg = msg => {
-  return Alert.alert('Oops!!', msg, [
-    {
-      text: 'OK',
-      onPress: () => {},
-    },
-  ]);
-};
 
 export default function OpenPdf({navigation, route}) {
   const [totalAngs, setTotalAngs] = React.useState(0);
@@ -56,7 +47,7 @@ export default function OpenPdf({navigation, route}) {
     navigation.addListener('beforeRemove', () => {
       dispatch(setAngNum(fullPath, pdfTitle, currentAngRef.current));
     });
-  });
+  }, [navigation, totalAngs]);
 
   React.useEffect(() => {
     if (showPdfModal) setHeaderShown(false);
@@ -84,7 +75,6 @@ export default function OpenPdf({navigation, route}) {
         activityIndicator={<ActivityIndicator size="large" color="blue" />}
         onLoadComplete={(numberOfPages, filePath) => {
           setTotalAngs(numberOfPages);
-          /* console.log(`filepath: ${filePath}`); */
         }}
         onPageChanged={page => {
           if (
@@ -164,12 +154,20 @@ function Header({
   setPdfModal,
 }) {
   const [textInput, setInput] = React.useState('');
+  const [range, setRange] = React.useState('');
   const angNumFontSize = 25;
 
   const {height} = useWindowDimensions();
 
   const styles = StyleSheet.create({
+    container: {
+      position: 'absolute',
+      flexDirection: 'column',
+      bottom: isPortrait() ? height - 160 : height - 130,
+      /* height: "100%", */
+    },
     headerContainer: {
+      flex: 1,
       justifyContent: 'space-between',
       alignItems: 'center',
       backgroundColor: allColors[state.darkMode].headerColor,
@@ -178,9 +176,6 @@ function Header({
       flexDirection: 'row',
       paddingHorizontal: 15,
       borderRadius: 10,
-      /* height: '9%', */
-      position: 'absolute',
-      bottom: isPortrait() ? height - 125 : height - 70,
     },
     title: {
       backgroundColor: '#077b8a',
@@ -200,7 +195,6 @@ function Header({
     setAngNumBox: {
       margin: 3,
       padding: 5,
-      //top:"2%",
       borderRadius: 5,
       backgroundColor: '#a2d5c6',
       textAlign: 'right',
@@ -209,68 +203,77 @@ function Header({
     totalAngsInfo: {
       fontSize: angNumFontSize,
     },
+    slider: {
+      backgroundColor: 'grey',
+      flex: 1,
+    },
   });
   let showTitle = title;
   if (showTitle.length > 10) showTitle = showTitle.slice(0, 7) + '..';
   const iconsSize = 25;
   return (
-    <View style={styles.headerContainer}>
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={styles.headerBtns}>
-        <Icon
-          name="arrow-back-outline"
-          size={iconsSize}
-          type="ionicon"
-          color={state.darkMode ? 'white' : 'black'}
-        />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => setPdfModal(true)}>
-        <Text style={styles.title}>{showTitle}</Text>
-      </TouchableOpacity>
-      <View style={styles.angNumInfo}>
-        <TextInput
-          style={styles.setAngNumBox}
-          keyboardType="numeric"
-          placeholder={currentAng.toString()}
-          value={textInput}
-          onSubmitEditing={e => {
-            const num = Number.parseInt(e.nativeEvent.text, 10);
-            setInput('');
-            if (!num) return;
-            pdfRef.current.setPage(num);
-          }}
-          onChangeText={txt => setInput(txt)}
-          /* onChangeText={txt => { */
-          /*   setInput(txt); */
-          /*   const num = Number.parseInt(txt, 10); */
-          /*   if (!num) return; */
-          /*   console.log(num); */
-          /*   pdfRef.current.setPage(num); */
-          /* }} */
-        />
-        <Text style={styles.totalAngsInfo}>/{totalAngs}</Text>
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={styles.headerBtns}>
+          <Icon
+            name="arrow-back-outline"
+            size={iconsSize}
+            type="ionicon"
+            color={state.darkMode ? 'white' : 'black'}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setPdfModal(true)}>
+          <Text style={styles.title}>{showTitle}</Text>
+        </TouchableOpacity>
+        <View style={styles.angNumInfo}>
+          <TextInput
+            style={styles.setAngNumBox}
+            keyboardType="numeric"
+            placeholder={currentAng.toString()}
+            value={textInput}
+            onSubmitEditing={e => {
+              const num = Number.parseInt(e.nativeEvent.text, 10);
+              setInput('');
+              if (!num) return;
+              pdfRef.current.setPage(num);
+            }}
+            onChangeText={txt => setInput(txt)}
+          />
+          <Text style={styles.totalAngsInfo}>/{totalAngs}</Text>
+        </View>
+        <View>
+          <RightOfHeader
+            state={state}
+            icons={[
+              {
+                name: 'shuffle-outline',
+                action: () => {
+                  const randAng = Math.floor(Math.random() * totalAngs) + 1;
+                  pdfRef.current.setPage(randAng);
+                  console.log(randAng);
+                },
+              },
+              {
+                name: 'settings-outline',
+                action: () => {
+                  navigation.navigate('Settings Page');
+                },
+              },
+            ]}
+          />
+        </View>
       </View>
-      <View>
-        <RightOfHeader
-          state={state}
-          icons={[
-            {
-              name: 'shuffle-outline',
-              action: () => {
-                const randAng = Math.floor(Math.random() * totalAngs) + 1;
-                pdfRef.current.setPage(randAng);
-                console.log(randAng);
-              },
-            },
-            {
-              name: 'settings-outline',
-              action: () => {
-                navigation.navigate('Settings Page');
-              },
-            },
-          ]}
+      <View style={styles.slider}>
+        <Slider
+          style={{fontSize: 40}}
+          value={currentAng / totalAngs}
+          onValueChange={value =>
+            pdfRef.current.setPage(Math.round(value * totalAngs))
+          }
         />
+        <Text>Value: {currentAng}</Text>
       </View>
     </View>
   );

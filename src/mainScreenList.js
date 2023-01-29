@@ -153,6 +153,34 @@ function TheListDisplayScreen({navigation, route}) {
     },
   });
 
+  function ShowBanisToRead() {
+    //only want to show bania on main screen
+    if (route.params.title !== 'Santhiya Pothi') return <></>;
+    return (
+      <View style={styles.mainBottom}>
+        <View style={styles.banisList}>
+          <BanisList state={state} navigation={navigation} />
+        </View>
+        <TouchableOpacity
+          style={styles.openShabadBtn}
+          onPress={() => {
+            const theID = getRandomShabadId();
+            const theObj = {shabadId: theID, saved: false};
+            navigation.navigate('ReadShabad', {
+              shabadData: theObj,
+              index: state.shabadHistory.length,
+              type: 'shabad',
+            });
+            dispatch(addToShabadHistory(theObj));
+          }}>
+          <Text style={{color: state.darkMode ? 'white' : 'black'}}>
+            Open Random Shabad
+          </Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.listContainer}>
@@ -163,31 +191,7 @@ function TheListDisplayScreen({navigation, route}) {
           navigation={navigation}
         />
       </View>
-      {route.params.title === 'Santhiya Pothi' ? (
-        <View style={styles.mainBottom}>
-          <View style={styles.banisList}>
-            <BanisList state={state} navigation={navigation} />
-          </View>
-          <TouchableOpacity
-            style={styles.openShabadBtn}
-            onPress={() => {
-              const theID = getRandomShabadId();
-              const theObj = {shabadId: theID, saved: false};
-              navigation.navigate('ReadShabad', {
-                shabadData: theObj,
-                index: state.shabadHistory.length,
-                type: 'shabad',
-              });
-              dispatch(addToShabadHistory(theObj));
-            }}>
-            <Text style={{color: state.darkMode ? 'white' : 'black'}}>
-              Open Random Shabad
-            </Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <></>
-      )}
+      <ShowBanisToRead />
     </SafeAreaView>
   );
 }

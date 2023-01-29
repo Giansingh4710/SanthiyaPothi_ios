@@ -5,13 +5,7 @@ import {
   Text,
   StyleSheet,
   View,
-  Button,
   TouchableOpacity,
-  Dimensions,
-  ScrollView,
-  Image,
-  Modal,
-  useWindowDimensions,
 } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Icon, Switch} from 'react-native-elements';
@@ -139,14 +133,12 @@ export function BanisList({state, navigation}) {
   return (
     <View style={styles.container}>
       <FlatList
-        data={ALLBANIS.banis}
-        keyExtractor={item => item.bani_name} //incase shabadId is same twice
+        data={ALLBANIS}
+        keyExtractor={item => item.bani_name}
         renderItem={({item, index}) => {
-          //item={"saved": false, "shabadId": "EWD"}
           return (
             <BarOption
               state={state}
-              // height={50}
               onClick={() => {
                 navigation.navigate('ReadShabad', {
                   bani_name: item.bani_name,
@@ -197,7 +189,7 @@ function ShabadHistoryView({state, dispatch, navigation}) {
   }, [navigation]);
 
   function getShabadTitle(id) {
-    return ALLSHABADS[id].slice(0, 30).replace(/\n/g, ' ') + '...';
+    return ALLSHABADS[id][0].slice(0, 30).replace(/\n/g, ' ') + '...';
   }
 
   const styles = StyleSheet.create({

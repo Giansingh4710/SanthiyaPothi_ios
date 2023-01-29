@@ -14,6 +14,7 @@ import {allColors} from '../../assets/styleForEachOption';
 import {setData, initialState} from '../../redux/reducers';
 import {setTheState} from '../../redux/actions';
 import {BarOption} from '../../assets/components/baroption';
+import {deleteAllCache} from '../utils.js';
 
 function SettingsPage({navigation}) {
   const state = useSelector(theState => theState.theReducer);
@@ -43,26 +44,6 @@ function SettingsPage({navigation}) {
       // height: '100%',
     },
   });
-  const createThreeButtonAlert = () =>
-    Alert.alert(
-      'Are you Sure you want to reset all Data?',
-      'This will delete all added pdfs , checked off boxes and last left off angs',
-      [
-        {
-          text: 'Cancel',
-          onPress: () => console.log('Cancel Pressed'),
-          style: 'cancel',
-        },
-        {
-          text: 'OK',
-          onPress: () => {
-            setData('state', initialState);
-            dispatch(setTheState(initialState));
-            RNRestart.Restart();
-          },
-        },
-      ],
-    );
 
   return (
     <View style={styles.container}>
@@ -107,6 +88,44 @@ function SettingsPage({navigation}) {
         height={95}
         left={
           <Icon
+            name="trash-outline"
+            type="ionicon"
+            color={state.darkMode ? 'white' : 'black'}
+          />
+        }
+        text="Delete Cache of All PDFs (Save Storage)"
+        right={
+          <Icon
+            name="arrow-forward-outline"
+            type="ionicon"
+            color={state.darkMode ? 'white' : 'black'}
+          />
+        }
+        onClick={() =>
+          Alert.alert(
+            'Are you Sure you want to Delete all the Cache?',
+            'By clicking OK, you will save space by deleting all the PDFs that are saved on your phone',
+            [
+              {
+                text: 'Cancel',
+                onPress: () => console.log('Cancel Pressed'),
+                style: 'cancel',
+              },
+              {
+                text: 'OK',
+                onPress: () => {
+                  deleteAllCache();
+                },
+              },
+            ],
+          )
+        }
+      />
+      <BarOption
+        state={state}
+        height={95}
+        left={
+          <Icon
             name="alert-circle-outline"
             type="ionicon"
             color={state.darkMode ? 'white' : 'black'}
@@ -120,7 +139,28 @@ function SettingsPage({navigation}) {
             color={state.darkMode ? 'white' : 'black'}
           />
         }
-        onClick={() => createThreeButtonAlert()}
+        onClick={() =>
+          Alert.alert(
+            'Are you Sure you want to reset all Data?',
+            'This will delete all added pdfs , checked off boxes and last left off angs. Basically reset the App ',
+            [
+              {
+                text: 'Cancel',
+                onPress: () => console.log('Cancel Pressed'),
+                style: 'cancel',
+              },
+              {
+                text: 'OK',
+                onPress: () => {
+                  setData('state', initialState);
+                  deleteAllCache();
+                  dispatch(setTheState(initialState));
+                  RNRestart.Restart();
+                },
+              },
+            ],
+          )
+        }
       />
     </View>
   );

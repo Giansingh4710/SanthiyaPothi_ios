@@ -19,6 +19,7 @@ export default function ReadShabad({navigation, route}) {
       : ALLSHABADS[modalInfo.shabadData.shabadId];
   const [fontsz, setfontsz] = React.useState(state.fontSizeForShabad);
   const [larrivar, setLarrivar] = React.useState(true);
+  const [percentageComplete, setPercentageComplete] = React.useState(1);
   const [shabadSaved, setSavedShabad] = React.useState(
     modalInfo.shabadData ? modalInfo.shabadData.saved : false,
   );
@@ -89,6 +90,12 @@ export default function ReadShabad({navigation, route}) {
       //borderRadius: 5,
       //width: WIDTH,
     },
+    completionLine: {
+      borderColor: 'grey',
+      borderWidth: 5,
+      margin: 3,
+      width: '100%',
+    },
     headerContainer: {
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -106,16 +113,52 @@ export default function ReadShabad({navigation, route}) {
     text: {
       color: state.darkMode ? 'white' : 'black',
     },
+    gurbaniScrollView: {
+      /* backgroundColor: '#888', */
+      borderColor: state.darkMode ? 'white' : 'black',
+      borderWidth: 1,
+      height: '90%',
+      padding: 10,
+      borderRadius: 10,
+    },
+    shabadText: {
+      fontSize: fontsz,
+      color: state.darkMode ? 'white' : 'black',
+    },
   });
 
   return (
     <View style={styles.container}>
-      <ShabadText
-        sbd={shabad}
-        larrivar={larrivar}
-        state={state}
-        fontsz={fontsz}
-      />
+      <View
+        style={{...styles.completionLine, width: percentageComplete}}></View>
+      <View style={styles.gurbaniScrollView}>
+        <FlatList
+          keyExtractor={(_, index) => index.toString()}
+          data={shabad}
+          renderItem={({item, index}) => {
+            /* console.log(index, 'rendered out of', shabad.length); */
+            setPercentageComplete(
+              Math.round((index * 100) / shabad.length).toString() + '%',
+            );
+            if (index % 2 === 0) {
+              //gurbani pangti
+              return (
+                <ShabadLine
+                  larrivar={larrivar}
+                  padChedLine={item}
+                  shabadTextStyle={styles.shabadText}
+                />
+              );
+            }
+            return (
+              <Text style={styles.shabadText}>
+                {item}
+                {'\n'}
+              </Text>
+            );
+          }}
+        />
+      </View>
       <View style={styles.plusMinusRow}>
         <View style={styles.bottomActions}>
           <Icon
@@ -153,46 +196,6 @@ export default function ReadShabad({navigation, route}) {
           />
         </View>
       </View>
-    </View>
-  );
-}
-
-function ShabadText({sbd, larrivar, state, fontsz}) {
-  const styles = StyleSheet.create({
-    gurbaniScrollView: {
-      //backgroundColor: '#888',
-      borderColor: state.darkMode ? 'white' : 'black',
-      borderWidth: 1,
-      height: '90%',
-      padding: 10,
-      borderRadius: 10,
-    },
-    shabadText: {
-      fontSize: fontsz,
-      color: state.darkMode ? 'white' : 'black',
-    },
-  });
-
-  return (
-    <View style={styles.gurbaniScrollView}>
-      <FlatList
-        keyExtractor={(_, index) => index.toString()}
-        data={sbd.split('\n')}
-        renderItem={({item, index}) => {
-          const lineType = index % 3 === 0 ? 'Gurbani' : 'Not Gurbani';
-          if (lineType === 'Gurbani') {
-            return (
-              <ShabadLine
-                larrivar={larrivar}
-                padChedLine={item}
-                lineType={lineType}
-                shabadTextStyle={styles.shabadText}
-              />
-            );
-          }
-          return <Text style={styles.shabadText}>{item}</Text>;
-        }}
-      />
     </View>
   );
 }

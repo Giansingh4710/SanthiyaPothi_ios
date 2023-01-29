@@ -185,10 +185,10 @@ export const folderToFileData = {
       currentAng: 1,
       uri: 'https://santhiyapothi.xyz/pdfs/BaiVarra/11)JaitsriKiVaarMahala5.pdf',
     },
-    '12) Soohi KI Vaar Mahala 3': {
+    '12) Soohi Ki Vaar Mahala 3': {
       checked: false,
       currentAng: 1,
-      uri: 'https://santhiyapothi.xyz/pdfs/BaiVarra/12)SoohiKIVaarMahala3.pdf',
+      uri: 'https://santhiyapothi.xyz/pdfs/BaiVarra/12)SoohiKiVaarMahala3.pdf',
     },
     '13) Bilval Ki Vaar Mahala 4': {
       checked: false,

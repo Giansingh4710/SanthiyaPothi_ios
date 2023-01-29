@@ -419,7 +419,7 @@ function commoncss(state) {
       flex: 1,
     },
     textInput: {
-      backgroundColor: 'rgba(0,0,0,0.5)',
+      backgroundColor: 'white',
       borderRadius: 5,
     },
     ButtomButton: {
