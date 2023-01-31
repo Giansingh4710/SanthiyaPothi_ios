@@ -33,18 +33,6 @@ export const setDarkMode = mode => dispatch => {
     mode,
   });
 };
-export const setHideHeader = mode => dispatch => {
-  dispatch({
-    type: 'SET_HIDE_HEADER',
-    mode,
-  });
-};
-export const setShowHeader = mode => dispatch => {
-  dispatch({
-    type: 'SET_SHOW_HEADER',
-    mode,
-  });
-};
 
 export const addPDForFolder = (key,value,fullPath) => dispatch => {
   dispatch({

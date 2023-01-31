@@ -9,7 +9,7 @@ import SwitchBar from './settingBarSwitch';
 // import SettingsBar from './settingBar';
 import {heightOfBar} from '../utils.js';
 
-import {setDarkMode, setHideHeader, setShowHeader} from '../../redux/actions';
+import {setDarkMode} from '../../redux/actions';
 import {allColors} from '../../assets/styleForEachOption';
 import {setData, initialState} from '../../redux/reducers';
 import {setTheState} from '../../redux/actions';
@@ -53,18 +53,6 @@ function SettingsPage({navigation}) {
           icons={['moon', 'sunny']} //if true icon=moon, if false icon=sunny
           nameInState={'darkMode'} //only true or false
           setter={setDarkMode}
-        />
-        <SwitchBar
-          SettingTitle="Hide Header On Scroll"
-          icons={['chevron-up-circle', 'close-outline']}
-          nameInState={'hideHeaderOnScroll'}
-          setter={setHideHeader}
-        />
-        <SwitchBar
-          SettingTitle="Show Header On Scroll"
-          icons={['chevron-down-circle', 'close-outline']}
-          nameInState={'showHeaderOnScroll'}
-          setter={setShowHeader}
         />
         {/* <SettingsBar
           theSetting="Type of Words"

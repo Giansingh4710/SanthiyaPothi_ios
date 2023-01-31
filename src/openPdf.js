@@ -10,7 +10,8 @@ import {
   Alert,
   TouchableOpacity,
 } from 'react-native';
-import {Icon, Slider} from 'react-native-elements';
+import {Icon} from 'react-native-elements';
+import {Slider} from '@miblanchard/react-native-slider';
 import {RightOfHeader} from '../assets/components/rightOfHeader';
 
 import Pdf from 'react-native-pdf';
@@ -77,19 +78,6 @@ export default function OpenPdf({navigation, route}) {
           setTotalAngs(numberOfPages);
         }}
         onPageChanged={page => {
-          if (
-            headerShown &&
-            state.hideHeaderOnScroll &&
-            page === currentAng + 1
-          ) {
-            setHeaderShown(false);
-          } else if (
-            !headerShown &&
-            state.showHeaderOnScroll &&
-            page + 1 === currentAng
-          ) {
-            setHeaderShown(true);
-          }
           setCurrentAng(page);
           currentAngRef.current = page;
         }}
@@ -164,7 +152,8 @@ function Header({
       position: 'absolute',
       flexDirection: 'column',
       bottom: isPortrait() ? height - 160 : height - 130,
-      /* height: "100%", */
+      width: '100%',
+      alignItems: 'center',
     },
     headerContainer: {
       flex: 1,
@@ -172,7 +161,6 @@ function Header({
       alignItems: 'center',
       backgroundColor: allColors[state.darkMode].headerColor,
       width: '100%',
-      height: 70,
       flexDirection: 'row',
       paddingHorizontal: 15,
       borderRadius: 10,
@@ -206,6 +194,10 @@ function Header({
     slider: {
       backgroundColor: 'grey',
       flex: 1,
+      /* left: 20, */
+      borderRadius: 5,
+      width: '90%',
+      /* alignItems: 'center', */
     },
   });
   let showTitle = title;
@@ -230,8 +222,9 @@ function Header({
         <View style={styles.angNumInfo}>
           <TextInput
             style={styles.setAngNumBox}
-            keyboardType="numeric"
+            /* keyboardType="numeric" */
             placeholder={currentAng.toString()}
+            placeholderTextColor="yellow"
             value={textInput}
             onSubmitEditing={e => {
               const num = Number.parseInt(e.nativeEvent.text, 10);
@@ -267,13 +260,11 @@ function Header({
       </View>
       <View style={styles.slider}>
         <Slider
-          style={{fontSize: 40}}
           value={currentAng / totalAngs}
           onValueChange={value =>
             pdfRef.current.setPage(Math.round(value * totalAngs))
           }
         />
-        <Text>Value: {currentAng}</Text>
       </View>
     </View>
   );

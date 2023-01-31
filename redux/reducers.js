@@ -12,8 +12,6 @@ export const setData = async (title, state) => {
 
 export const initialState = {
   darkMode: true,
-  hideHeaderOnScroll: true,
-  showHeaderOnScroll: true,
   allPdfs: {...folderToFileData},
   fontSizeForShabad: 16,
   //addedPdfs: {title: 'Added PDFs', list: []},
@@ -39,18 +37,6 @@ function theReducer(state = initialState, action) {
     const newState = {
       ...state,
       darkMode: action.mode,
-    };
-    theState = newState;
-  } else if (action.type === 'SET_HIDE_HEADER') {
-    const newState = {
-      ...state,
-      hideHeaderOnScroll: action.mode,
-    };
-    theState = newState;
-  } else if (action.type === 'SET_SHOW_HEADER') {
-    const newState = {
-      ...state,
-      showHeaderOnScroll: action.mode,
     };
     theState = newState;
   } else if (action.type === 'ADD_PDF_OR_FOLDER') {
