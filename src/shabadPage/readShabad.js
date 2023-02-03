@@ -19,7 +19,6 @@ export default function ReadShabad({navigation, route}) {
       : ALLSHABADS[modalInfo.shabadData.shabadId];
   const [fontsz, setfontsz] = React.useState(state.fontSizeForShabad);
   const [larrivar, setLarrivar] = React.useState(true);
-  const [percentageComplete, setPercentageComplete] = React.useState(1);
   const [shabadSaved, setSavedShabad] = React.useState(
     modalInfo.shabadData ? modalInfo.shabadData.saved : false,
   );
@@ -90,12 +89,6 @@ export default function ReadShabad({navigation, route}) {
       //borderRadius: 5,
       //width: WIDTH,
     },
-    completionLine: {
-      borderColor: 'grey',
-      borderWidth: 5,
-      margin: 3,
-      width: '100%',
-    },
     headerContainer: {
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -129,17 +122,12 @@ export default function ReadShabad({navigation, route}) {
 
   return (
     <View style={styles.container}>
-      <View
-        style={{...styles.completionLine, width: percentageComplete}}></View>
       <View style={styles.gurbaniScrollView}>
         <FlatList
           keyExtractor={(_, index) => index.toString()}
           data={shabad}
           renderItem={({item, index}) => {
             /* console.log(index, 'rendered out of', shabad.length); */
-            setPercentageComplete(
-              Math.round((index * 100) / shabad.length).toString() + '%',
-            );
             if (index % 2 === 0) {
               //gurbani pangti
               return (
