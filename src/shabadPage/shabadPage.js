@@ -6,6 +6,7 @@ import {
   StyleSheet,
   View,
   TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Icon, Switch} from 'react-native-elements';
@@ -17,6 +18,7 @@ import {ALLSHABADS} from '../../assets/allShabads.js';
 import {ALLBANIS} from '../../assets/banis.js';
 import {BarOption} from '../../assets/components/baroption';
 import {heightOfBar} from '../utils.js';
+import {TextInput} from 'react-native-gesture-handler';
 
 export function ShabadScreen({navigation}) {
   const dispatch = useDispatch();
@@ -71,6 +73,12 @@ export function ShabadScreen({navigation}) {
   });
 
   const pages = [
+    <SearchShabad
+      key={'2'}
+      state={state}
+      dispatch={dispatch}
+      navigation={navigation}
+    />,
     <ShabadHistoryView
       key={'1'}
       state={state}
@@ -117,6 +125,117 @@ export function ShabadScreen({navigation}) {
         }}
       />
     </SafeAreaView>
+  );
+}
+
+function SearchShabad({state, navigation, dispatch}) {
+  const [searchText, setSeach] = React.useState('');
+  const [lstData, setLstData] = React.useState([]);
+
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      width: Dimensions.get('window').width,
+    },
+    titleText: {
+      color: state.darkMode ? 'white' : 'black',
+    },
+    bar: {
+      width: Dimensions.get('window').width,
+    },
+    search: {
+      backgroundColor: '#a2d5c6',
+      borderRadius: 5,
+      margin: 5,
+      padding: 5,
+    },
+  });
+
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.search}
+        placeholder={'Search For Shabad'}
+        placeholderTextColor="white"
+        value={searchText}
+        onSubmitEditing={() => {
+        }}
+        onChangeText={txt => {
+          setSeach(txt);
+          if(txt===''){
+            setLstData([])
+            return
+          }
+
+          const theLst = []
+          const enteredText = txt.toLowerCase().split(' ')
+
+          Object.entries(ALLSHABADS).filter(([ID, shabadLst]) => { // find shabads that have the entered words in them
+            let matchedLine; //will line matched with the last word
+            let allWordsInShabad = true;
+
+            for(const word of enteredText){
+              const wrdInSbd = shabadLst.some(line => {
+                matchedLine = line;
+                return line.toLowerCase().includes(word.toLowerCase());
+              });
+              if(!wrdInSbd){
+                allWordsInShabad = false;
+                break
+              } 
+            }
+            if (allWordsInShabad) {
+              theLst.push([ID,matchedLine])
+              return []; // no matter what I return, it will return the ID,shabadLst parameter that went into the function
+            }
+          });
+          setLstData(theLst);
+        }}
+      />
+      <Text style={styles.titleText}>{lstData.length} Shabads Found</Text>
+      <FlatList
+        data={lstData}
+        keyExtractor={item => item[0]} //ID
+        renderItem={({item, index}) => {
+          return (
+            <View style={styles.bar}>
+              <BarOption
+                state={state}
+                onClick={() => {
+                  const theID = item[0];
+                  const theObj = {shabadId: theID, saved: false};
+                  navigation.navigate('ReadShabad', {
+                    shabadData: theObj,
+                    index: state.shabadHistory.length,
+                    type: 'shabad',
+                  });
+                  dispatch(addToShabadHistory(theObj));
+                }}
+                left={
+                  <Icon
+                    name="reader-outline"
+                    type="ionicon"
+                    color={state.darkMode ? 'white' : 'black'}
+                  />
+                }
+                /* text={getShabadTitle(item[0])} */
+                text={item[1]}
+                right={
+                  <Icon
+                    name="arrow-forward-outline"
+                    size={25}
+                    type="ionicon"
+                    color={state.darkMode ? 'white' : 'black'}
+                  />
+                }
+              />
+            </View>
+          );
+        }}
+      />
+    </View>
   );
 }
 
@@ -176,6 +295,10 @@ function ShabadHistoryView({state, dispatch, navigation}) {
     state.shabadHistory.slice().reverse(),
   );
 
+  function getShabadTitle(id) {
+    return ALLSHABADS[id][0].slice(0, 30).replace(/\n/g, ' ') + '...';
+  }
+
   React.useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
       // The screen is focused
@@ -188,10 +311,6 @@ function ShabadHistoryView({state, dispatch, navigation}) {
     return unsubscribe;
   }, [navigation]);
 
-  function getShabadTitle(id) {
-    return ALLSHABADS[id][0].slice(0, 30).replace(/\n/g, ' ') + '...';
-  }
-
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -200,8 +319,11 @@ function ShabadHistoryView({state, dispatch, navigation}) {
       borderRadius: 5,
       margin: 5,
       padding: 5,
-      //width: WIDTH,
+      width: Dimensions.get('window').width,
       //backgroundColor: 'blue',
+    },
+    bar: {
+      width: Dimensions.get('window').width,
     },
     titleText: {
       color: state.darkMode ? 'white' : 'black',
@@ -223,36 +345,37 @@ function ShabadHistoryView({state, dispatch, navigation}) {
         data={listOfData}
         keyExtractor={item => item.shabadId + Math.random()} //incase shabadId is same twice
         renderItem={({item, index}) => {
-          //console.log(item);
           //item={"saved": false, "shabadId": "EWD"}
           if (showSaved && !item.saved) return;
           return (
-            <BarOption
-              state={state}
-              onClick={() => {
-                navigation.navigate('ReadShabad', {
-                  shabadData: item,
-                  index: listOfData.length - 1 - index,
-                  type: 'shabad',
-                });
-              }}
-              left={
-                <Icon
-                  name="reader-outline"
-                  type="ionicon"
-                  color={state.darkMode ? 'white' : 'black'}
-                />
-              }
-              text={getShabadTitle(item.shabadId)}
-              right={
-                <Icon
-                  name="arrow-forward-outline"
-                  size={25}
-                  type="ionicon"
-                  color={state.darkMode ? 'white' : 'black'}
-                />
-              }
-            />
+            <View style={styles.bar}>
+              <BarOption
+                state={state}
+                onClick={() => {
+                  navigation.navigate('ReadShabad', {
+                    shabadData: item,
+                    index: listOfData.length - 1 - index,
+                    type: 'shabad',
+                  });
+                }}
+                left={
+                  <Icon
+                    name="reader-outline"
+                    type="ionicon"
+                    color={state.darkMode ? 'white' : 'black'}
+                  />
+                }
+                text={getShabadTitle(item.shabadId)}
+                right={
+                  <Icon
+                    name="arrow-forward-outline"
+                    size={25}
+                    type="ionicon"
+                    color={state.darkMode ? 'white' : 'black'}
+                  />
+                }
+              />
+            </View>
           );
         }}
         ListEmptyComponent={

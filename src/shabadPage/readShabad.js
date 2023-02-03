@@ -86,7 +86,6 @@ export default function ReadShabad({navigation, route}) {
       alignItems: 'center',
       backgroundColor: allColors[state.darkMode].readShabad.container,
       padding: 10,
-      //borderRadius: 5,
       //width: WIDTH,
     },
     headerContainer: {
@@ -101,7 +100,12 @@ export default function ReadShabad({navigation, route}) {
       flexDirection: 'row',
     },
     bottomActions: {
-      marginHorizontal: 10,
+      flex: 1,
+      margin: 5,
+      borderRadius: 5,
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: state.darkMode ? 'black' : 'white'
     },
     text: {
       color: state.darkMode ? 'white' : 'black',
@@ -139,15 +143,22 @@ export default function ReadShabad({navigation, route}) {
               );
             }
             return (
-              <Text style={styles.shabadText}>
-                {item}
-                {'\n'}
-              </Text>
+              <TouchableOpacity onLongPress={() => copyToClipboard(item)}>
+                <Text style={styles.shabadText}>
+                  {item}
+                  {'\n'}
+                </Text>
+              </TouchableOpacity>
             );
           }}
         />
       </View>
       <View style={styles.plusMinusRow}>
+        <TouchableOpacity
+          style={styles.bottomActions}
+          onPress={() => Clipboard.setString('')}>
+          <Text style={styles.text}>Clear Clipboard</Text>
+        </TouchableOpacity>
         <View style={styles.bottomActions}>
           <Icon
             name="remove-outline"
@@ -183,6 +194,11 @@ export default function ReadShabad({navigation, route}) {
             }}
           />
         </View>
+        <TouchableOpacity
+          style={styles.bottomActions}
+          onPress={() => Clipboard.setString(shabad.join('\n'))}>
+          <Text style={styles.text}>Copy Shabad</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -201,11 +217,22 @@ function ShabadLine({larrivar, padChedLine, shabadTextStyle}) {
         setLarrivar(!lineIsLarrivar);
       }}
       onLongPress={() => {
-        Clipboard.setString(lineIsLarrivar ? larrivarLine : padChedLine);
+        copyToClipboard(lineIsLarrivar ? larrivarLine : padChedLine);
       }}>
       <Text style={shabadTextStyle}>
         {lineIsLarrivar ? larrivarLine : padChedLine}
       </Text>
     </TouchableOpacity>
   );
+}
+
+async function copyToClipboard(line) {
+  let theText = await Clipboard.getString();
+
+  if (theText.length === 0 || theText.slice(-1) !== '~') {
+    theText = line + '\n~';
+  } else {
+    theText = theText.slice(0, -1) + line + '\n~';
+  }
+  Clipboard.setString(theText);
 }
