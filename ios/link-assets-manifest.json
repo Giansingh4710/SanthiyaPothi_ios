@@ -1,0 +1,45 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/AmrLipiHeavy.ttf",
+      "sha1": "74cbabdd97246fd6d501ccfa1a695bf5f86c6537"
+    },
+    {
+      "path": "assets/fonts/AnmolLipi.ttf",
+      "sha1": "3fe9684d3f30dbad86e2a09d4fa72cd6d5f3eb3e"
+    },
+    {
+      "path": "assets/fonts/Choti Script 7 Bold.ttf",
+      "sha1": "31aa7a7e7de0a07f553fc762138a2a414bfafb7f"
+    },
+    {
+      "path": "assets/fonts/GHW Adhiapak Black.ttf",
+      "sha1": "677e89727d9998c7f6241d1e79612c5af570a7fe"
+    },
+    {
+      "path": "assets/fonts/GHW Adhiapak Bold.ttf",
+      "sha1": "ce3fcf454bba30cc78666325435c807aabb2a46c"
+    },
+    {
+      "path": "assets/fonts/GHW Adhiapak Book.ttf",
+      "sha1": "80eeb40f255ffac99d63201438552ab1d258e65b"
+    },
+    {
+      "path": "assets/fonts/GHW Adhiapak Chisel Blk.ttf",
+      "sha1": "bc836e04266245d8ec56ad2f3ac471622c36c4ed"
+    },
+    {
+      "path": "assets/fonts/GHW Adhiapak Extra Light.ttf",
+      "sha1": "fa333699376bb588693723a00a7906ae020a3a2b"
+    },
+    {
+      "path": "assets/fonts/GHW Adhiapak Light.ttf",
+      "sha1": "0f07b591aa6df474613ac3394b1867fe36cb58ca"
+    },
+    {
+      "path": "assets/fonts/GHW Adhiapak Medium.ttf",
+      "sha1": "168f6ad8853b04a3d49a34e91c2604f8fcbfa904"
+    }
+  ]
+}

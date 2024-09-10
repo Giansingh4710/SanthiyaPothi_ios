@@ -13,11 +13,9 @@ import {Icon, Switch} from 'react-native-elements';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {allColors} from '../../assets/styleForEachOption';
 import {addToShabadHistory, clearHistory} from '../../redux/actions';
-import {RightOfHeader} from '../../assets/components/rightOfHeader';
+import {RightOfHeader} from '../components/rightOfHeader.js';
 import {ALLSHABADS} from '../../assets/allShabads.js';
-import {ALLBANIS} from '../../assets/banis.js';
-import {BarOption} from '../../assets/components/baroption';
-import {heightOfBar} from '../utils.js';
+import {BarOption} from '../components/baroption.js';
 import {TextInput} from 'react-native-gesture-handler';
 
 export function ShabadScreen({navigation}) {
@@ -28,7 +26,6 @@ export function ShabadScreen({navigation}) {
     navigation.setOptions({
       headerStyle: {
         backgroundColor: allColors[state.darkMode].headerColor,
-        height: heightOfBar(),
       },
       title: 'Random Shabad',
       headerTintColor: state.darkMode ? 'white' : 'black',
@@ -85,12 +82,6 @@ export function ShabadScreen({navigation}) {
       dispatch={dispatch}
       navigation={navigation}
     />,
-    /* <BanisList */
-    /*   key={'2'} */
-    /*   state={state} */
-    /*   dispatch={dispatch} */
-    /*   navigation={navigation} */
-    /* />, */
   ];
 
   return (
@@ -239,55 +230,6 @@ function SearchShabad({state, navigation, dispatch}) {
   );
 }
 
-export function BanisList({state, navigation}) {
-  const styles = StyleSheet.create({
-    container: {
-      width: '100%',
-    },
-    titleText: {
-      color: state.darkMode ? 'white' : 'black',
-    },
-  });
-
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={ALLBANIS}
-        keyExtractor={item => item.bani_name}
-        renderItem={({item, index}) => {
-          return (
-            <BarOption
-              state={state}
-              onClick={() => {
-                navigation.navigate('ReadShabad', {
-                  bani_name: item.bani_name,
-                  bani: item.bani,
-                  type: 'bani',
-                });
-              }}
-              left={
-                <Icon
-                  name="reader-outline"
-                  type="ionicon"
-                  color={state.darkMode ? 'white' : 'black'}
-                />
-              }
-              text={item.bani_name}
-              right={
-                <Icon
-                  name="arrow-forward-outline"
-                  size={25}
-                  type="ionicon"
-                  color={state.darkMode ? 'white' : 'black'}
-                />
-              }
-            />
-          );
-        }}
-      />
-    </View>
-  );
-}
 
 function ShabadHistoryView({state, dispatch, navigation}) {
   const [showSaved, setShowSaved] = React.useState(false);

@@ -12,8 +12,18 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		33F9F38F99414B608ADD4E82 /* AmrLipiHeavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7732878A1F249C39FD659D5 /* AmrLipiHeavy.ttf */; };
+		3E8D3958FB2D4BDDB2CFC0FE /* GHW Adhiapak Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBD9D468557C4BA68A3F230E /* GHW Adhiapak Book.ttf */; };
+		3F86748E4FFA4054B125836C /* Choti Script 7 Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 980603AEE157462090B2161C /* Choti Script 7 Bold.ttf */; };
+		57C60238DBF0412A9E72A5E0 /* GHW Adhiapak Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BF39ADF233B46D59A0BD4D8 /* GHW Adhiapak Black.ttf */; };
+		5A7F0EFBB56F4E6E8546BA3E /* GHW Adhiapak Chisel Blk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6670E43B89C4CC9903CF9F0 /* GHW Adhiapak Chisel Blk.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8F8BB6008BA24CE1AE7C85F7 /* AnmolLipi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C576AF6D4E1045F58A2D003C /* AnmolLipi.ttf */; };
+		941767AFF08742C89E5F5FBF /* GHW Adhiapak Extra Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42A057659A5D4E8AB96FB184 /* GHW Adhiapak Extra Light.ttf */; };
+		AB482152173E49EB98CC96C9 /* GHW Adhiapak Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C115DE4C3A44E50A6AC5A89 /* GHW Adhiapak Bold.ttf */; };
+		B688A07C7F534255946D97F9 /* GHW Adhiapak Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 385FF25D8F6644C083D125BD /* GHW Adhiapak Medium.ttf */; };
+		C4CD121CD7424A91906EC3F9 /* GHW Adhiapak Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 795D5C3ECBA841AEBD08B5D8 /* GHW Adhiapak Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +47,23 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SanthiyaPothi/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SanthiyaPothi/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SanthiyaPothi-SanthiyaPothiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		385FF25D8F6644C083D125BD /* GHW Adhiapak Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Medium.ttf"; path = "../assets/fonts/GHW Adhiapak Medium.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-SanthiyaPothi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi.debug.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi.debug.xcconfig"; sourceTree = "<group>"; };
+		3BF39ADF233B46D59A0BD4D8 /* GHW Adhiapak Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Black.ttf"; path = "../assets/fonts/GHW Adhiapak Black.ttf"; sourceTree = "<group>"; };
+		42A057659A5D4E8AB96FB184 /* GHW Adhiapak Extra Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Extra Light.ttf"; path = "../assets/fonts/GHW Adhiapak Extra Light.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-SanthiyaPothi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi.release.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-SanthiyaPothi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SanthiyaPothi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		795D5C3ECBA841AEBD08B5D8 /* GHW Adhiapak Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Light.ttf"; path = "../assets/fonts/GHW Adhiapak Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SanthiyaPothi/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig"; sourceTree = "<group>"; };
+		980603AEE157462090B2161C /* Choti Script 7 Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Choti Script 7 Bold.ttf"; path = "../assets/fonts/Choti Script 7 Bold.ttf"; sourceTree = "<group>"; };
+		9C115DE4C3A44E50A6AC5A89 /* GHW Adhiapak Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Bold.ttf"; path = "../assets/fonts/GHW Adhiapak Bold.ttf"; sourceTree = "<group>"; };
+		A7732878A1F249C39FD659D5 /* AmrLipiHeavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AmrLipiHeavy.ttf; path = ../assets/fonts/AmrLipiHeavy.ttf; sourceTree = "<group>"; };
+		C576AF6D4E1045F58A2D003C /* AnmolLipi.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AnmolLipi.ttf; path = ../assets/fonts/AnmolLipi.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F6670E43B89C4CC9903CF9F0 /* GHW Adhiapak Chisel Blk.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Chisel Blk.ttf"; path = "../assets/fonts/GHW Adhiapak Chisel Blk.ttf"; sourceTree = "<group>"; };
+		FBD9D468557C4BA68A3F230E /* GHW Adhiapak Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Book.ttf"; path = "../assets/fonts/GHW Adhiapak Book.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +126,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6DC6B0D718754711AD837BB0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7732878A1F249C39FD659D5 /* AmrLipiHeavy.ttf */,
+				C576AF6D4E1045F58A2D003C /* AnmolLipi.ttf */,
+				980603AEE157462090B2161C /* Choti Script 7 Bold.ttf */,
+				3BF39ADF233B46D59A0BD4D8 /* GHW Adhiapak Black.ttf */,
+				9C115DE4C3A44E50A6AC5A89 /* GHW Adhiapak Bold.ttf */,
+				FBD9D468557C4BA68A3F230E /* GHW Adhiapak Book.ttf */,
+				F6670E43B89C4CC9903CF9F0 /* GHW Adhiapak Chisel Blk.ttf */,
+				42A057659A5D4E8AB96FB184 /* GHW Adhiapak Extra Light.ttf */,
+				795D5C3ECBA841AEBD08B5D8 /* GHW Adhiapak Light.ttf */,
+				385FF25D8F6644C083D125BD /* GHW Adhiapak Medium.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +160,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				6DC6B0D718754711AD837BB0 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +283,16 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				33F9F38F99414B608ADD4E82 /* AmrLipiHeavy.ttf in Resources */,
+				8F8BB6008BA24CE1AE7C85F7 /* AnmolLipi.ttf in Resources */,
+				3F86748E4FFA4054B125836C /* Choti Script 7 Bold.ttf in Resources */,
+				57C60238DBF0412A9E72A5E0 /* GHW Adhiapak Black.ttf in Resources */,
+				AB482152173E49EB98CC96C9 /* GHW Adhiapak Bold.ttf in Resources */,
+				3E8D3958FB2D4BDDB2CFC0FE /* GHW Adhiapak Book.ttf in Resources */,
+				5A7F0EFBB56F4E6E8546BA3E /* GHW Adhiapak Chisel Blk.ttf in Resources */,
+				941767AFF08742C89E5F5FBF /* GHW Adhiapak Extra Light.ttf in Resources */,
+				C4CD121CD7424A91906EC3F9 /* GHW Adhiapak Light.ttf in Resources */,
+				B688A07C7F534255946D97F9 /* GHW Adhiapak Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

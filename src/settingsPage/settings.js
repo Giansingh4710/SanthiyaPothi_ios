@@ -7,13 +7,12 @@ import {Icon} from 'react-native-elements';
 import {useSelector, useDispatch} from 'react-redux';
 import SwitchBar from './settingBarSwitch';
 // import SettingsBar from './settingBar';
-import {heightOfBar} from '../utils.js';
 
 import {setDarkMode} from '../../redux/actions';
 import {allColors} from '../../assets/styleForEachOption';
 import {setData, initialState} from '../../redux/reducers';
 import {setTheState} from '../../redux/actions';
-import {BarOption} from '../../assets/components/baroption';
+import {BarOption} from '../components/baroption.js';
 import {deleteAllCache} from '../utils.js';
 
 function SettingsPage({navigation}) {
@@ -24,7 +23,6 @@ function SettingsPage({navigation}) {
     navigation.setOptions({
       headerStyle: {
         backgroundColor: allColors[state.darkMode].headerColor,
-        height: heightOfBar(),
       },
       headerTintColor: state.darkMode ? 'white' : 'black',
       headerTitleStyle: {

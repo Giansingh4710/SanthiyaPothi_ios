@@ -4,7 +4,7 @@ import {Switch, Icon} from 'react-native-elements';
 
 import {useDispatch, useSelector} from 'react-redux';
 
-import {BarOption} from '../../assets/components/baroption';
+import {BarOption} from '../components/baroption';
 
 function SwitchBar({SettingTitle, icons, nameInState, setter}) {
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ function SwitchBar({SettingTitle, icons, nameInState, setter}) {
         </View>
       }
       onClick={() => {
-        console.log(SettingTitle, ':', settingOnOff);
+        // console.log(SettingTitle, ':', settingOnOff);
         dispatch(setter(!settingOnOff));
       }}
     />

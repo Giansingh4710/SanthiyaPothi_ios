@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -54,6 +54,16 @@
 		<string>SimpleLineIcons.ttf</string>
 		<string>Octicons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>AmrLipiHeavy.ttf</string>
+		<string>AnmolLipi.ttf</string>
+		<string>Choti Script 7 Bold.ttf</string>
+		<string>GHW Adhiapak Black.ttf</string>
+		<string>GHW Adhiapak Bold.ttf</string>
+		<string>GHW Adhiapak Book.ttf</string>
+		<string>GHW Adhiapak Chisel Blk.ttf</string>
+		<string>GHW Adhiapak Extra Light.ttf</string>
+		<string>GHW Adhiapak Light.ttf</string>
+		<string>GHW Adhiapak Medium.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -64,7 +74,7 @@
 	<key>UIStatusBarHidden</key>
 	<false/>
 	<key>UIStatusBarStyle</key>
-	<string></string>
+	<string/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>

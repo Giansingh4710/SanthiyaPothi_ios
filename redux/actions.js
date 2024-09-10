@@ -77,15 +77,47 @@ export const toggleSaveForShabad = (index) => dispatch => {
   });
 };
 
-// export const setTheState = state => {
-//   return {
-//     type: 'SET_THE_STATE',
-//     state,
-//   };
-// };
-// export const setCheckBox = baniTitle => {
-//   return {
-//     type: 'SET_CHECKBOX',
-//     theBani: baniTitle,
-//   };
-// };
+//--------------------------------
+export const togglePDFVersionList = (mode) => dispatch => {
+  dispatch({
+    type: 'TOGGLE_PDF_VERSION_LIST',
+    mode,
+  });
+};
+
+export const setSettingsForTextBani = (settings) => dispatch => {
+  dispatch({
+    type: 'SET_SETTINGS_FOR_TEXT_BANI',
+    settings,
+  });
+};
+export const setFontFamily = fontFamily => dispatch => {
+  dispatch({
+    type: 'SET_FONT_FAMILY',
+    fontFamily,
+  });
+};
+
+export const setTxtBaniCheckBox = (baniTitle, fullPath) => dispatch => {
+  dispatch({
+    type: 'SET_TXT_BANI_CHECKBOX',
+    theBani: baniTitle,
+    fullPath,
+  });
+};
+
+export const setPDFStar = (item, fullPath) => dispatch => {
+  dispatch({
+    type: 'SET_PDF_STAR',
+    item,
+    fullPath,
+  });
+};
+
+export const setTextBaniStar = (item, fullPath) => dispatch => {
+  dispatch({
+    type: 'SET_TXT_BANI_STAR',
+    item,
+    fullPath,
+  });
+};

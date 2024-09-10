@@ -1,6 +1,8 @@
 import {getStatusBarHeight} from 'react-native-status-bar-height';
 import {Dimensions} from 'react-native';
 const RNFS = require('react-native-fs');
+import {allColors} from '../assets/styleForEachOption.js';
+import {RightOfHeader} from './components/rightOfHeader.js';
 
 /* async function mkdir(path) { */
 /*   await RNFS.exists(path).then(dirExists => { */
@@ -73,3 +75,46 @@ const alertMsg = msg => {
     },
   ]);
 };
+
+export function navigatorHearderObj(
+  title,
+  dataObj,
+  fullPath,
+  navigation,
+  state,
+) {
+  // const title = route.params.title;
+  // const dataObj = route.params.dataObj;
+  // const fullPath = route.params.fullPath;
+
+  const showTitle = title.length > 15 ? title.slice(0, 15) + '...' : title;
+  return {
+    title: showTitle,
+    headerStyle: {
+      backgroundColor: allColors[state.darkMode].headerColor,
+      height: heightOfBar(),
+    },
+    headerContainerStyle: {padding: 50},
+    headerTintColor: state.darkMode ? 'white' : 'black',
+    headerTitleStyle: {
+      color: state.darkMode ? 'white' : 'black',
+    },
+    headerRight: () => (
+      <RightOfHeader
+        state={state}
+        icons={[
+          {
+            name: 'open-outline',
+            action: () => navigation.navigate('ShabadScreen'),
+          },
+          {
+            name: 'settings-outline',
+            action: () => {
+              navigation.navigate('Settings Page');
+            },
+          },
+        ]}
+      />
+    ),
+  };
+}

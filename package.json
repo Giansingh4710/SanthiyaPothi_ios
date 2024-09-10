@@ -14,9 +14,11 @@
     "@react-native-async-storage/async-storage": "^1.15.5",
     "@react-native-clipboard/clipboard": "^1.11.0",
     "@react-native-community/checkbox": "^0.5.12",
+    "@react-native-picker/picker": "^2.7.7",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/stack": "^5.14.5",
     "@reduxjs/toolkit": "^1.6.1",
+    "@shopify/flash-list": "^1.7.0",
     "react": "18.1.0",
     "react-native": "0.69.0",
     "react-native-blob-util": "^0.16.2",
@@ -30,11 +32,13 @@
     "react-native-restart": "^0.0.23",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.4.0",
+    "react-native-select-dropdown": "^4.0.1",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-vector-icons": "^8.1.0",
     "react-redux": "^7.2.4",
     "redux": "^4.1.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "rn-swipeable-panel": "^1.2.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

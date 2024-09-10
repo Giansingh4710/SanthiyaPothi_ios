@@ -6,17 +6,13 @@ import {allColors} from '../../assets/styleForEachOption';
 import {setFontSize, toggleSaveForShabad} from '../../redux/actions';
 import {ALLSHABADS} from '../../assets/allShabads.js';
 import {useDispatch, useSelector} from 'react-redux';
-import {RightOfHeader} from '../../assets/components/rightOfHeader';
-import {heightOfBar} from '../utils.js';
+import {RightOfHeader} from '../components/rightOfHeader.js';
 
 export default function ReadShabad({navigation, route}) {
   const dispatch = useDispatch();
   let state = useSelector(theState => theState.theReducer);
   const modalInfo = route.params;
-  const shabad =
-    modalInfo.type === 'bani'
-      ? modalInfo.bani
-      : ALLSHABADS[modalInfo.shabadData.shabadId];
+  const shabad = ALLSHABADS[modalInfo.shabadData.shabadId];
   const [fontsz, setfontsz] = React.useState(state.fontSizeForShabad);
   const [larrivar, setLarrivar] = React.useState(true);
   const [shabadSaved, setSavedShabad] = React.useState(
@@ -31,9 +27,8 @@ export default function ReadShabad({navigation, route}) {
     navigation.setOptions({
       headerStyle: {
         backgroundColor: allColors[state.darkMode].headerColor,
-        height: heightOfBar(),
       },
-      title: modalInfo.bani ? modalInfo.bani_name : 'Random Shabad',
+      title: 'Random Shabad',
       headerTintColor: state.darkMode ? 'white' : 'black',
       headerTitleStyle: {
         color: state.darkMode ? 'white' : 'black',
