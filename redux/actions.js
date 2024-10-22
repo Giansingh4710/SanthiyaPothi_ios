@@ -91,12 +91,6 @@ export const setSettingsForTextBani = (settings) => dispatch => {
     settings,
   });
 };
-export const setFontFamily = fontFamily => dispatch => {
-  dispatch({
-    type: 'SET_FONT_FAMILY',
-    fontFamily,
-  });
-};
 
 export const setTxtBaniCheckBox = (baniTitle, fullPath) => dispatch => {
   dispatch({
