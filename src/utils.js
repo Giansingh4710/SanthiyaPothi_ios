@@ -61,10 +61,8 @@ export function isPortrait() {
 }
 
 export function heightOfBar() {
-  if (isPortrait()) {
-    return getStatusBarHeight() + 85;
-  }
-  return getStatusBarHeight() + 40;
+  if (isPortrait()) { return 90; }
+  return 50
 }
 
 const alertMsg = msg => {
@@ -78,15 +76,9 @@ const alertMsg = msg => {
 
 export function navigatorHearderObj(
   title,
-  dataObj,
-  fullPath,
   navigation,
   state,
 ) {
-  // const title = route.params.title;
-  // const dataObj = route.params.dataObj;
-  // const fullPath = route.params.fullPath;
-
   const showTitle = title.length > 15 ? title.slice(0, 15) + '...' : title;
   return {
     title: showTitle,

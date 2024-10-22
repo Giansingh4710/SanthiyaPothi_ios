@@ -1,42 +1,13 @@
 Things To Do:
+Fix SP. can't go to dasam parts or puratan
 
-- how to make a non stop audio livestream on web
-- Check filters house and garage camera
-- Teach Sandeep and Santhiya
-
-- AWS bill. Change to dad card
-- Symlink obs config. No cp
-
-- Keerat:
-    - Can reach player from regular keerat.xyz so that can link tracks from tracks index to player
-
-    - Make back end faster
-    - Add HPS
-
-    - Fix audio bug double play audio. Unload audio when track changed 
-    - Add Nitnem AU and other banis
-    - TrackIndex. Href so people can copy raw link. And copy link to track
-    - Time based Keertan fix
-
-    - Why do links for fully work on android. Can?t go to a time
-    - Ads for money for server
-    - LOGIN SYSTEM. Save TRACKS
-    - Navigator next when screen off
 - Bani Frames/ SP:
-    - Add a basics/muharni/baal updesh section Save bani position so picks up where you left off
-    - Dynamic Font Size to fit screen 
-    - Progress bar
-    - Disable back and next when u can?t go back or next.
-    - When at end highlight next button
-    - toggle full bani on 1 screen.
+    - Read SGGS text
+    - Get all data from API. PDFS and Text
+    - Add a basics/muharni/baal updesh section
+    - Dynamic Font Size to fit screen
+    - Fix Index points and add for all Baniyaa
     - No more saved Shabad and only have history of 10 last random shabads
     - Add better searching. First letter
-
-- Other Ideas:
-    - Git track photos iPhone if possible
-    - Santhiya Pothi make new for Android from IOS code and add BaniFrames Stuff to mobile
-
-- Other stuff:
-- Radios:
-    - Jassa
-    - Angad Singh Indiana
+    - Put Bhram kavach
+    - Fix random Shabad. The algo and data. The heading too big

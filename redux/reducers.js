@@ -20,7 +20,7 @@ export const initialState = {
   //shabadHistory:[{shabadId:'1YU',saved:false}],
   shabadHistory: [],
 
-  pdfVersionList: true,
+  pdfVersionList: false,
   allTextBanis: {...bani_display_order},
   staredTextBanis: [],
   textBaniSettings: {
@@ -31,11 +31,14 @@ export const initialState = {
     translationType: {
       en: '', // "", "bdb" , "ms" , "ssk"
       pu: '', // "", "ss" , "ft" , "bdb", "ms"
-      es: '', // "", "sn" 
+      es: '', // "", "sn"
     },
     transliterationType: '', //'en', 'hi', 'ipa', 'ur' , ''
-    fontType: 'AmrLipiHeavy',
+    fontType: 'AmrLipiHeavy', // "AmrLipiHeavy", "AnmolLipi", "Choti Script 7 Bold", "GHW Adhiapak Black", "GHW Adhiapak Bold", "GHW Adhiapak Book", "GHW Adhiapak Chisel Blk", "GHW Adhiapak Extra Light", "GHW Adhiapak Light", "GHW Adhiapak Medium"
     visraamType: 'igurbani', //can only be 'sttm' 'igurbani' 'sttm2' or ''
+    showProgressBarForDisplayLines: true,
+    showProgressBarForWholeBani: true,
+    baniInParts: true,
   },
 };
 
@@ -100,9 +103,6 @@ function theReducer(state = initialState, action) {
   } else if (action.type === 'SET_SETTINGS_FOR_TEXT_BANI') {
     state.textBaniSettings = {...action.settings};
     theState = {...state};
-  } else if (action.type === 'SET_FONT_FAMILY') {
-    state.fontFor = action.fontFamily;
-    theState = state;
   } else if (action.type === 'SET_TXT_BANI_CHECKBOX') {
     changePDFsObj(
       state.allTextBanis,

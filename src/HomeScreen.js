@@ -70,8 +70,6 @@ function HomeScreen({navigation, route}) {
     navigation.setOptions(
       navigatorHearderObj(
         'Santhiya Pothi',
-        folderToFileDataPDFs,
-        [],
         navigation,
         state,
       ),

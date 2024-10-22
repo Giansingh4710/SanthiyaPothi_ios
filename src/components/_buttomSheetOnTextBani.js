@@ -1,45 +1,35 @@
-import React, {useState} from 'react';
-import {StyleSheet, Image, Text, View, TouchableOpacity} from 'react-native';
+import React, {useCallback} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {SwipeablePanel} from 'rn-swipeable-panel';
 import {Slider} from '@miblanchard/react-native-slider';
-import {Switch, Icon, CheckBox} from 'react-native-elements';
+import {Icon, CheckBox} from 'react-native-elements';
 import SelectDropdown from 'react-native-select-dropdown';
 
-function ButtomSheet({
-  setButtomSheet,
-  bottomSheetOpen,
-  setFontSize,
-  fontSize,
+import {setSettingsForTextBani} from '../../redux/actions.js';
+import {setDarkMode} from '../../redux/actions';
+import {useSelector, useDispatch} from 'react-redux';
 
-  gurmukhiOn,
-  setGurmukhiOn,
-  translationType,
-  setTranslations,
-  larivaarOn,
-  setLarivaarOn,
-  transliterationType,
-  setTransliteration,
-  navigationRowOnTop,
-  setNavigationRow,
+export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
+  const dispatch = useDispatch();
+  const textBaniSettings = useSelector(
+    theState => theState.theReducer.textBaniSettings,
+  );
+  const darkMode = useSelector(theState => theState.theReducer.darkMode);
 
-  visraamType,
-  setVisraam,
-  fontType,
-  setFont,
-}) {
-  const [panelProps, setPanelProps] = useState({
-    fullWidth: true,
-    openLarge: !true,
-    // onlyLarge: true,
-    // onlySmall: true,
-    showCloseButton: true,
-    onClose: () => {
-      setButtomSheet(false);
+  const updateSettings = useCallback(
+    (key, value) => {
+      dispatch(setSettingsForTextBani({...textBaniSettings, [key]: value}));
     },
-    onPressCloseButton: () => setButtomSheet(false),
-  });
+    [dispatch, textBaniSettings],
+  );
 
-  const [transliterationOpen, setTransliterationOpen] = useState(false);
+  const panelProps = {
+    fullWidth: true,
+    openLarge: false,
+    showCloseButton: true,
+    onClose: () => setBottomSheetOpen(false),
+    onPressCloseButton: () => setBottomSheetOpen(false),
+  };
 
   const styles = StyleSheet.create({
     container: {
@@ -59,57 +49,102 @@ function ButtomSheet({
     <View style={styles.container}>
       <SwipeablePanel {...panelProps} isActive={bottomSheetOpen}>
         <View style={styles.panelContent}>
-          <FontSlider fontSize={fontSize} setFontSize={setFontSize} />
+          <FontSlider
+            fontSize={textBaniSettings.fontSize}
+            setFontSize={value => updateSettings('fontSize', value)}
+          />
           <SettingCheckbox
             title="Navigation Row On Top"
-            val={navigationRowOnTop}
-            setter={setNavigationRow}
+            val={textBaniSettings.navigationRowOnTop}
+            setter={value => updateSettings('navigationRowOnTop', value)}
           />
+          <SettingCheckbox
+            title="Dark Mode"
+            val={darkMode}
+            setter={() => dispatch(setDarkMode(!darkMode))}
+          />
+
           <ConditionalRender
             setting1={{
               title: 'Gurmukhi',
-              val: gurmukhiOn,
-              setter: setGurmukhiOn,
+              val: textBaniSettings.gurmukhiOn,
+              setter: () =>
+                updateSettings('gurmukhiOn', !textBaniSettings.gurmukhiOn),
             }}
             setting2={{
               title: 'Larivaar',
-              val: larivaarOn,
-              setter: setLarivaarOn,
+              val: textBaniSettings.larivaarOn,
+              setter: () =>
+                updateSettings('larivaarOn', !textBaniSettings.larivaarOn),
             }}
           />
+
           <View style={{flexDirection: 'row'}}>
             <TheSelect
               title="Transliterations"
               options={['', 'en', 'hi', 'ipa', 'ur']}
-              setter={setTransliteration}
-              value={transliterationType}
+              value={textBaniSettings.transliterationType}
+              setter={val => updateSettings('transliterationType', val)}
             />
             <TheSelect
               title="Visraam"
               options={['', 'igurbani', 'sttm', 'sttm2']}
-              setter={setVisraam}
-              value={visraamType}
+              value={textBaniSettings.visraamType}
+              setter={val => updateSettings('visraamType', val)}
+            />
+            <TheSelect
+              title="Font "
+              options={[
+                'AmrLipiHeavy',
+                'AnmolLipi',
+                'Choti Script 7 Bold',
+                'GHW Adhiapak Black',
+                'GHW Adhiapak Bold',
+                'GHW Adhiapak Book',
+                'GHW Adhiapak Chisel Blk',
+                'GHW Adhiapak Extra Light',
+                'GHW Adhiapak Light',
+                'GHW Adhiapak Medium',
+              ]}
+              value={textBaniSettings.fontType}
+              setter={val => updateSettings('fontType', val)}
             />
           </View>
+
           <View style={{flexDirection: 'column'}}>
             <Text>Translations</Text>
             <TheSelect
               title="English Source"
               options={['', 'bdb', 'ms', 'ssk']}
-              value={translationType.en}
-              setter={input => setTranslations(old => ({...old, en: input}))}
+              value={textBaniSettings.translationType.en}
+              setter={val =>
+                updateSettings('translationType', {
+                  ...textBaniSettings.translationType,
+                  en: val,
+                })
+              }
             />
             <TheSelect
               title="Punjabi Source"
               options={['', 'bdb', 'ms', 'ssk']}
-              value={translationType.pu}
-              setter={input => setTranslations(old => ({...old, pu: input}))}
+              value={textBaniSettings.translationType.pu}
+              setter={val =>
+                updateSettings('translationType', {
+                  ...textBaniSettings.translationType,
+                  pu: val,
+                })
+              }
             />
             <TheSelect
               title="Spanish Source"
               options={['', 'bdb', 'ms', 'ssk']}
-              value={translationType.es}
-              setter={input => setTranslations(old => ({...old, es: input}))}
+              value={textBaniSettings.translationType.es}
+              setter={val =>
+                updateSettings('translationType', {
+                  ...textBaniSettings.translationType,
+                  es: val,
+                })
+              }
             />
           </View>
         </View>
@@ -223,48 +258,6 @@ function TheSelect({title, options, setter, value}) {
   );
 }
 
-
-function InputSelectOne({title, opts, selected, setter}) {
-  const styles = StyleSheet.create({
-    cont: {
-      alignItems: 'flex-start',
-      // padding: 0,
-    },
-    heading: {
-      flexDirection: 'row',
-      paddingLeft: 5,
-      alignItems: 'center',
-      fontWeight: 'bold', // This makes the text bold
-    },
-    checks: {
-      flexDirection: 'row',
-      // marginRight: 1,
-    },
-  });
-
-  return (
-    <View style={styles.cont}>
-      <View style={styles.heading}>
-        <Text style={{fontWeight: 'bold'}}>{title}:</Text>
-      </View>
-      <View style={styles.checks}>
-        {opts.map((opt, idx) => (
-          <SettingCheckbox
-            key={idx}
-            title={opt === '' ? 'None' : opt}
-            val={opt === selected}
-            setter={() => {
-              if (opt === selected)
-                setter(''); // make it blank is same clicked
-              else setter(opt);
-            }}
-          />
-        ))}
-      </View>
-    </View>
-  );
-}
-
 function SettingCheckbox({title, val, setter}) {
   const styles = StyleSheet.create({
     cont: {flex: 1},
@@ -323,72 +316,6 @@ function ConditionalRender({setting1, setting2}) {
   );
 }
 
-function Switcher({title, value, setter}) {
-  const styles = StyleSheet.create({
-    cont: {
-      flexDirection: 'row',
-    },
-    text: {
-      fontSize: 16,
-      textAlign: 'center',
-      color: '#666666',
-    },
-  });
-  return (
-    <View style={styles.cont}>
-      <Text style={styles.text}>{title}:</Text>
-      <Switch
-        value={value}
-        onValueChange={newSetting => {
-          setter(newSetting);
-        }}
-      />
-    </View>
-  );
-}
-
-function SelectFont() {
-  return (
-    <View className="flex flex-col items-center">
-      <select
-        className="m-1 p-1  border border-sky-500 rounded bg-white text-black text-xs"
-        value={selectedFont}
-        onChange={event => {
-          setFont(event.currentTarget.value);
-        }}>
-        {fonts.map((fontName, idx) => (
-          <option key={idx} value={fontName}>
-            Font: {fontName}
-          </option>
-        ))}
-      </select>
-
-      <View>
-        <Picker
-          ref={pickerRef}
-          selectedValue={selectedLanguage}
-          onValueChange={(itemValue, itemIndex) => setSelectedLanguage('java')}>
-          <Picker.Item label="Java" value="java" />
-          <Picker.Item label="JavaScript" value="js" />
-        </Picker>
-
-        <TouchableOpacity
-          onClick={() => {
-            pickerRef.current.focus();
-          }}>
-          <Text>Open</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onClick={() => {
-            pickerRef.current.blur();
-          }}>
-          <Text>Close</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
-}
-
 function FontSlider({fontSize, setFontSize}) {
   const styles = StyleSheet.create({
     fontCont: {
@@ -413,7 +340,6 @@ function FontSlider({fontSize, setFontSize}) {
     <View style={styles.fontCont}>
       <View style={styles.topRow}>
         <Icon
-          // color={state.darkMode ? 'white' : 'black'}
           name="remove-outline"
           type="ionicon"
           onPress={() => {
@@ -451,5 +377,3 @@ function FontSlider({fontSize, setFontSize}) {
     </View>
   );
 }
-
-export default ButtomSheet;

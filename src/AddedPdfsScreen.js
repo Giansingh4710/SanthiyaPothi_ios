@@ -16,7 +16,7 @@ export default function AddedPDFsScreen({route, navigation}) {
   React.useEffect(() => {
     const {title, fullPath, dataObj} = route.params;
     navigation.setOptions(
-      navigatorHearderObj(title, dataObj, fullPath, navigation, state),
+      navigatorHearderObj(title, navigation, state),
     );
   });
 

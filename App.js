@@ -14,7 +14,7 @@ import SettingsPage from './src/settingsPage/settings';
 import {ShabadScreen} from './src/shabadPage/shabadPage.js';
 import ReadShabad from './src/shabadPage/readShabad.js';
 import AddedPDFsScreen from './src/AddedPdfsScreen.js';
-import OpenTxtBaniScreen from './src/OpenTxtBaniScreen.js';
+import OpenTxtBaniScreen from './src/textBaniPage/OpenTxtBaniScreen.js';
 
 const Stack = createStackNavigator();
 
