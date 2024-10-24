@@ -1,20 +1,19 @@
-import React, {useRef, useState, useEffect, useMemo} from 'react';
-import {Text, StyleSheet, View, TouchableOpacity, Alert} from 'react-native';
-import {Icon} from 'react-native-elements';
-import {useSelector, useDispatch} from 'react-redux';
+import React, { useRef, useState, useEffect, useMemo } from 'react';
+import { Text, StyleSheet, View, TouchableOpacity, Alert } from 'react-native';
+import { Icon } from 'react-native-elements';
+import { useSelector } from 'react-redux';
 import SelectDropdown from 'react-native-select-dropdown';
 
-import {bani_partitions} from '../../assets/longData_text.js';
-import {banis_api_data} from '../../assets/text_banis_data.js';
-import {allColors} from '../../assets/styleForEachOption.js';
+import { bani_partitions } from '../../assets/longData_text.js';
+import { banis_api_data } from '../../assets/text_banis_data.js';
+import { allColors } from '../../assets/styleForEachOption.js';
 
 import ButtomSheet from './buttomSheetOnTextBani.js';
 import DisplayVerses from './displayVerses.js';
 import NavigationRow from './navRow.js';
 
-export default function OpenTxtBaniScreen({navigation, route}) {
-  const {bani_token, dataObj, token_index} = route.params;
-  const dispatch = useDispatch();
+export default function OpenTxtBaniScreen({ navigation, route }) {
+  const { bani_token, dataObj, token_index } = route.params;
   const darkMode = useSelector(state => state.theReducer.darkMode);
   const textBaniSettings = useSelector(
     state => state.theReducer.textBaniSettings,
@@ -86,7 +85,7 @@ export default function OpenTxtBaniScreen({navigation, route}) {
     textBaniSettings.baniInParts,
   ]);
 
-  function NavRow({onTop}) {
+  function NavRow({ onTop }) {
     if (onTop === textBaniSettings.navigationRowOnTop)
       return (
         <View style={styles.navRow}>
@@ -142,7 +141,7 @@ export default function OpenTxtBaniScreen({navigation, route}) {
           <View
             style={[
               styles.overallProgressBar,
-              {width: `${overallProgress * 100}%`},
+              { width: `${overallProgress * 100}%` },
             ]}
           />
         </View>
@@ -156,7 +155,7 @@ export default function OpenTxtBaniScreen({navigation, route}) {
   );
 }
 
-function TheSelect({options, setCurrPartitionIdx, currPartitionIdx, darkMode}) {
+function TheSelect({ options, setCurrPartitionIdx, currPartitionIdx, darkMode }) {
   const dropdownRef = useRef(null);
   const styles = StyleSheet.create({
     dropdownButtonStyle: {
@@ -235,7 +234,7 @@ function TheSelect({options, setCurrPartitionIdx, currPartitionIdx, darkMode}) {
           <View
             style={{
               ...styles.dropdownItemStyle,
-              ...(isSelected && {backgroundColor: '#D2D9DF'}),
+              ...(isSelected && { backgroundColor: '#D2D9DF' }),
             }}>
             <Text style={styles.dropdownItemTxtStyle}>{item.title}</Text>
           </View>
