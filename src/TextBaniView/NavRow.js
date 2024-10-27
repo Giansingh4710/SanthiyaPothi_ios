@@ -2,7 +2,6 @@ import React, {useRef, useState, useEffect, useCallback} from 'react';
 import {FlashList} from '@shopify/flash-list';
 import {Text, StyleSheet, View, TouchableOpacity, Alert} from 'react-native';
 import {Icon} from 'react-native-elements';
-import {bani_partitions} from '../../assets/longData_text.js';
 import {banis_api_data} from '../../assets/text_banis_data.js';
 import {allColors} from '../../assets/styleForEachOption.js';
 import {incrementKey} from '../../assets/helper_funcs.js';
@@ -11,7 +10,7 @@ import {setSettingsForTextBani} from '../../redux/actions.js';
 import {useSelector, useDispatch} from 'react-redux';
 
 import SelectDropdown from 'react-native-select-dropdown';
-import ButtomSheet from './buttomSheetOnTextBani.js';
+import BottomSheet from './BottomSheet.js';
 
 
 export default function NavigationRow({
@@ -28,7 +27,7 @@ export default function NavigationRow({
 
   const atEnd = currPartitionIdx === maxPartition;
   const baniInParts = useSelector(
-    theState => theState.theReducer.textBaniSettings.baniInParts,
+    theState => theState.theReducer.text_bani.baniInParts,
   );
 
   const styles = StyleSheet.create({
@@ -59,6 +58,7 @@ export default function NavigationRow({
   });
 
   function NextBtn() {
+    if (baniInParts === false) return null;
     return (
       <TouchableOpacity
         style={{...styles.btn, borderColor: 'black'}}
@@ -79,6 +79,7 @@ export default function NavigationRow({
   }
 
   function PrevBtn() {
+    if (baniInParts === false) return null;
     return (
       <TouchableOpacity
         style={[styles.btn, currPartitionIdx === 0 && styles.disabledBtn]}
@@ -98,6 +99,7 @@ export default function NavigationRow({
   }
 
   function NextBaniBtn() {
+    if (dataObj === undefined || token_index === undefined) return null;
     const [next_bani_token, nextInd] = incrementKey(dataObj, token_index);
     const bani_data = banis_api_data[next_bani_token];
     const title = bani_data.baniInfo.unicode;

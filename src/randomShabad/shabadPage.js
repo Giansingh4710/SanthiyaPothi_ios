@@ -34,7 +34,7 @@ export function ShabadScreen({navigation}) {
       },
       headerRight: () => (
         <RightOfHeader
-          state={state}
+          darkMode={state.darkMode}
           icons={[
             {
               name: 'settings-outline',
@@ -193,7 +193,7 @@ function SearchShabad({state, navigation, dispatch}) {
           return (
             <View style={styles.bar}>
               <BarOption
-                state={state}
+                darkMode={state.darkMode}
                 onClick={() => {
                   const theID = item[0];
                   const theObj = {shabadId: theID, saved: false};
@@ -292,7 +292,7 @@ function ShabadHistoryView({state, dispatch, navigation}) {
           return (
             <View style={styles.bar}>
               <BarOption
-                state={state}
+                darkMode={state.darkMode}
                 onClick={() => {
                   navigation.navigate('ReadShabad', {
                     shabadData: item,
@@ -322,7 +322,7 @@ function ShabadHistoryView({state, dispatch, navigation}) {
         }}
         ListEmptyComponent={
           <BarOption
-            state={state}
+            darkMode={state.darkMode}
             onClick={() => {
               const theID = getRandomShabadId();
               const theObj = {shabadId: theID, saved: false};

@@ -8,18 +8,18 @@ import {useSelector, useDispatch} from 'react-redux';
 import {setSettingsForTextBani, setDarkMode} from '../../redux/actions';
 import {initialState} from '../../redux/reducers';
 
-export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
+export default function BottomSheet({setBottomSheetOpen, bottomSheetOpen}) {
   const dispatch = useDispatch();
-  const textBaniSettings = useSelector(
-    theState => theState.theReducer.textBaniSettings,
+  const text_bani = useSelector(
+    theState => theState.theReducer.text_bani,
   );
   const darkMode = useSelector(theState => theState.theReducer.darkMode);
 
   const updateSettings = useCallback(
     (key, value) => {
-      dispatch(setSettingsForTextBani({...textBaniSettings, [key]: value}));
+      dispatch(setSettingsForTextBani({...text_bani, [key]: value}));
     },
-    [dispatch, textBaniSettings],
+    [dispatch, text_bani],
   );
 
   const panelProps = {
@@ -75,7 +75,7 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
 
           <View style={styles.section}>
             <FontSlider
-              fontSize={textBaniSettings.fontSize}
+              fontSize={text_bani.fontSize}
               setFontSize={value => updateSettings('fontSize', value)}
               darkMode={darkMode}
             />
@@ -84,7 +84,7 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
           <View style={[styles.section, styles.row]}>
             <SettingCheckbox
               title="Nav Row Top"
-              val={textBaniSettings.navigationRowOnTop}
+              val={text_bani.navigationRowOnTop}
               setter={value => updateSettings('navigationRowOnTop', value)}
             />
             <SettingCheckbox
@@ -95,9 +95,9 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
 
             <SettingCheckbox
               title="Bani In Parts"
-              val={textBaniSettings.baniInParts}
+              val={text_bani.baniInParts}
               setter={() =>
-                updateSettings('baniInParts', !textBaniSettings.baniInParts)
+                updateSettings('baniInParts', !text_bani.baniInParts)
               }
             />
           </View>
@@ -108,7 +108,7 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
               <TheSelect
                 title="Visraam Data from"
                 options={['', 'igurbani', 'sttm', 'sttm2']}
-                value={textBaniSettings.visraamType}
+                value={text_bani.visraamType}
                 setter={val => updateSettings('visraamType', val)}
               />
               <TheSelect
@@ -121,17 +121,17 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
                   'GHW Adhiapak Bold',
                   'GHW Adhiapak Book',
                 ]}
-                value={textBaniSettings.fontType}
+                value={text_bani.fontType}
                 setter={val => updateSettings('fontType', val)}
               />
 
               <TheSelect
                 title="English Translation"
                 options={['', 'bdb', 'ms', 'ssk']}
-                value={textBaniSettings.translationType.en}
+                value={text_bani.translationType.en}
                 setter={val =>
                   updateSettings('translationType', {
-                    ...textBaniSettings.translationType,
+                    ...text_bani.translationType,
                     en: val,
                   })
                 }
@@ -139,10 +139,10 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
               <TheSelect
                 title="Punjabi Translation"
                 options={['', 'bdb', 'ms', 'ssk']}
-                value={textBaniSettings.translationType.pu}
+                value={text_bani.translationType.pu}
                 setter={val =>
                   updateSettings('translationType', {
-                    ...textBaniSettings.translationType,
+                    ...text_bani.translationType,
                     pu: val,
                   })
                 }
@@ -150,10 +150,10 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
               <TheSelect
                 title="Spanish Translation"
                 options={['', 'sn']}
-                value={textBaniSettings.translationType.es}
+                value={text_bani.translationType.es}
                 setter={val =>
                   updateSettings('translationType', {
-                    ...textBaniSettings.translationType,
+                    ...text_bani.translationType,
                     es: val,
                   })
                 }
@@ -161,7 +161,7 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
               <TheSelect
                 title="Transliterations"
                 options={['', 'en', 'hi', 'ipa', 'ur']}
-                value={textBaniSettings.transliterationType}
+                value={text_bani.transliterationType}
                 setter={val => updateSettings('transliterationType', val)}
               />
             </View>
@@ -170,17 +170,17 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
           <View style={[styles.section, styles.wrapRow]}>
             <SettingCheckbox
               title="Show Gurmukhi"
-              val={textBaniSettings.gurmukhiOn}
+              val={text_bani.gurmukhiOn}
               setter={() =>
-                updateSettings('gurmukhiOn', !textBaniSettings.gurmukhiOn)
+                updateSettings('gurmukhiOn', !text_bani.gurmukhiOn)
               }
             />
-            {textBaniSettings.gurmukhiOn && (
+            {text_bani.gurmukhiOn && (
               <SettingCheckbox
                 title="Larivaar"
-                val={textBaniSettings.larivaarOn}
+                val={text_bani.larivaarOn}
                 setter={() =>
-                  updateSettings('larivaarOn', !textBaniSettings.larivaarOn)
+                  updateSettings('larivaarOn', !text_bani.larivaarOn)
                 }
               />
             )}
@@ -190,14 +190,14 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
             <Text style={styles.sectionTitle}>Progress Bars</Text>
             <SettingCheckbox
               title="Progress Bar For Current Display"
-              val={textBaniSettings.showProgressBarForDisplayLines}
+              val={text_bani.showProgressBarForDisplayLines}
               setter={value =>
                 updateSettings('showProgressBarForDisplayLines', value)
               }
             />
             <SettingCheckbox
               title="Progress Bar for Whole Bani"
-              val={textBaniSettings.showProgressBarForWholeBani}
+              val={text_bani.showProgressBarForWholeBani}
               setter={value =>
                 updateSettings('showProgressBarForWholeBani', value)
               }
@@ -228,7 +228,7 @@ export default function ButtomSheet({setBottomSheetOpen, bottomSheetOpen}) {
                       text: 'OK',
                       onPress: () => {
                         dispatch(
-                          setSettingsForTextBani(initialState.textBaniSettings),
+                          setSettingsForTextBani(initialState.text_bani),
                         );
                       },
                     },

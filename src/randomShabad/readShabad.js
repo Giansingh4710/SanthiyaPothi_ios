@@ -2,8 +2,8 @@ import React from 'react';
 import {FlatList, Text, StyleSheet, View, TouchableOpacity} from 'react-native';
 import Clipboard from '@react-native-clipboard/clipboard';
 import {Icon, Switch} from 'react-native-elements';
-import {allColors} from '../../assets/styleForEachOption';
-import {setFontSize, toggleSaveForShabad} from '../../redux/actions';
+import {allColors} from '../../assets/styleForEachOption.js';
+import {setFontSize, toggleSaveForShabad} from '../../redux/actions.js';
 import {ALLSHABADS} from '../../assets/allShabads.js';
 import {useDispatch, useSelector} from 'react-redux';
 import {RightOfHeader} from '../components/rightOfHeader.js';
@@ -35,7 +35,7 @@ export default function ReadShabad({navigation, route}) {
       },
       headerRight: () => (
         <RightOfHeader
-          state={state}
+          darkMode={state.darkMode}
           icons={
             modalInfo.type === 'shabad'
               ? [

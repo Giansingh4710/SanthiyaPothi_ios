@@ -3,7 +3,7 @@ import {BarOption} from './baroption.js';
 import {Icon, CheckBox} from 'react-native-elements';
 
 export function MainBar({
-  state,
+  darkMode,
   isFolder,
   text,
   checked,
@@ -14,7 +14,7 @@ export function MainBar({
 }) {
   return (
     <BarOption
-      state={state}
+      darkMode={darkMode}
       onClick={onClick}
       height={50}
       fontSize={16}
@@ -23,7 +23,7 @@ export function MainBar({
         <Icon
           name={isFolder ? 'folder-outline' : 'document-outline'}
           type="ionicon"
-          color={state.darkMode ? 'white' : 'black'}
+          color={darkMode ? 'white' : 'black'}
         />
       }
       right={
@@ -31,7 +31,7 @@ export function MainBar({
           <Icon
             name="arrow-forward-outline"
             type="ionicon"
-            color={state.darkMode ? 'white' : 'black'}
+            color={darkMode ? 'white' : 'black'}
           />
         ) : (
           <View
@@ -55,7 +55,7 @@ export function MainBar({
               <Icon
                 name={isStared ? 'star' : 'star-outline'}
                 type="ionicon"
-                color={state.darkMode ? 'white' : 'black'}
+                color={darkMode ? 'white' : 'black'}
               />
             </TouchableOpacity>
           </View>

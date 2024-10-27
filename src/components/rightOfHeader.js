@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, FlatList, TouchableOpacity} from 'react-native';
 import {Icon} from 'react-native-elements';
 
-export function RightOfHeader({icons, state}) {
+export function RightOfHeader({icons, darkMode}) {
   const styles = StyleSheet.create({
     container: {
       //backgroundColor: 'red',
@@ -29,7 +29,7 @@ export function RightOfHeader({icons, state}) {
             <Icon
               name={item.name}
               type="ionicon"
-              color={state.darkMode ? 'white' : 'black'}
+              color={darkMode ? 'white' : 'black'}
             />
           </TouchableOpacity>
         );

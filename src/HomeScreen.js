@@ -1,84 +1,35 @@
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Text,
-  FlatList,
-} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, {useEffect} from 'react';
+import {FlashList} from '@shopify/flash-list';
+import {SafeAreaView, StyleSheet, TouchableOpacity, View, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {
-  setTheState,
-  correctPDFstate,
-  addToShabadHistory,
-  togglePDFVersionList,
-  setTextBaniStar,
-  setPDFStar,
-  setTxtBaniCheckBox,
-  setCheckBox,
-} from '../redux/actions.js';
-import {initialState} from '../redux/reducers.js';
+import {addToShabadHistory, togglePDFVersionList} from '../redux/actions.js';
 import {allColors} from '../assets/styleForEachOption.js';
-import {getRandomShabadId} from './shabadPage/shabadPage.js';
+import {getRandomShabadId} from './randomShabad/shabadPage.js';
 import {navigatorHearderObj} from './utils.js';
-import PDFsListDisplay from './components/PDFsListDisplay.js';
-import {folderToFileDataPDFs} from '../assets/longData_pdf.js';
-import {bani_display_order} from '../assets/longData_text.js';
-import {TxtBaniListDisplay} from './TextBanisListScreen.js';
-import {getItemFromFullPath, haveSameKeys} from '../assets/helper_funcs.js';
-import {MainBar} from './components/mainBarOpt.js';
+import PDFsListDisplay from './listPdf/PDFsListDisplay.js';
+import PdfBar from './listPdf/PdfBar.js';
+import TxtBaniListDisplay from './listTextBani/TxtBaniListDisplay.js';
+import TxtBaniBar from './listTextBani/TxtBaniBar.js';
+import {getItemFromFullPath} from '../assets/helper_funcs.js';
+import {useInitializeData} from './hooks.js';
 
 import {Switch, Icon} from 'react-native-elements';
 
 function HomeScreen({navigation, route}) {
-  const dispatch = useDispatch();
-  let state = useSelector(theState => theState.theReducer);
+  const allPdfs = useSelector(theState => theState.theReducer.pdf.allPdfs);
+  const allTextBanis = useSelector(theState => theState.theReducer.text_bani.allTextBanis);
+  const isPdfList = useSelector(theState => theState.theReducer.isPdfList);
+  const darkMode = useSelector(theState => theState.theReducer.darkMode);
 
-  React.useEffect(() => {
-    async function getData() {
-      try {
-        const theStringState = await AsyncStorage.getItem('state');
-        let theState;
-        if (theStringState) {
-          theState = JSON.parse(theStringState);
-          if (haveSameKeys(initialState, theState) === false) {
-            theState = initialState;
-            console.log(
-              'Inital State had diffrent number of keys than saved state',
-            );
-          } else {
-            console.log('state was found and loaded');
-          }
-        } else {
-          console.log('there is nothing is state');
-          theState = initialState;
-        }
-        state = theState;
-        dispatch(setTheState(theState));
-        dispatch(correctPDFstate());
-      } catch (error) {
-        // Error retrieving data
-        console.log(error);
-      }
-    }
-    getData();
-  }, []);
+  useInitializeData();
 
-  React.useEffect(() => {
-    navigation.setOptions(
-      navigatorHearderObj(
-        'Santhiya Pothi',
-        navigation,
-        state,
-      ),
-    );
+  useEffect(() => {
+    navigation.setOptions(navigatorHearderObj('Santhiya Pothi', navigation, darkMode));
   });
 
   const styles = StyleSheet.create({
     container: {
-      backgroundColor: allColors[state.darkMode].mainBackgroundColor,
+      backgroundColor: allColors[darkMode].mainBackgroundColor,
       height: '100%',
     },
     mainListContainer: {
@@ -99,43 +50,40 @@ function HomeScreen({navigation, route}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.mainListContainer}>
-        {state['pdfVersionList'] ? (
-          <PDFsListDisplay
-            state={state}
-            dispatch={dispatch}
-            fullPath={[]}
-            dataObj={folderToFileDataPDFs}
-            navigation={navigation}
-          />
+        {isPdfList ? (
+          <PDFsListDisplay fullPath={[]} dataObj={allPdfs} navigation={navigation} />
         ) : (
-          <TxtBaniListDisplay
-            state={state}
-            dispatch={dispatch}
-            fullPath={[]}
-            dataObj={bani_display_order}
-            navigation={navigation}
-          />
+          <TxtBaniListDisplay fullPath={[]} dataObj={allTextBanis} navigation={navigation} />
         )}
       </View>
       <View style={styles.staredList}>
-        <StaredItems
-          state={state}
-          dispatch={dispatch}
-          navigation={navigation}
-        />
+        <StaredItems navigation={navigation} />
       </View>
       <View style={styles.bottomList}>
-        <MainScreenButtom
-          state={state}
-          dispatch={dispatch}
-          navigation={navigation}
-        />
+        <MainScreenButtom navigation={navigation} />
       </View>
     </SafeAreaView>
   );
 }
 
-function StaredItems({state, dispatch, navigation}) {
+function StaredItems({navigation}) {
+  const darkMode = useSelector(theState => theState.theReducer.darkMode);
+  const {allStaredItems, fullObj, isPdfList} = useSelector(theState => {
+    if (theState.theReducer.isPdfList) {
+      return {
+        allStaredItems: theState.theReducer.pdf.staredPdfs,
+        fullObj: theState.theReducer.pdf.allPdfs,
+        isPdfList: theState.theReducer.isPdfList,
+      };
+    }
+    return {
+      allStaredItems: theState.theReducer.text_bani.staredTextBanis,
+      fullObj: theState.theReducer.text_bani.allTextBanis,
+      isPdfList: theState.theReducer.isPdfList,
+    };
+  });
+  const list = Object.values(allStaredItems).filter(item => item.on);
+
   const staredStyles = StyleSheet.create({
     container: {
       alignItems: 'center',
@@ -143,7 +91,7 @@ function StaredItems({state, dispatch, navigation}) {
       height: '100%',
     },
     title: {
-      color: state.darkMode ? 'white' : 'black',
+      color: darkMode ? 'white' : 'black',
       alignSelf: 'flex-start',
       fontWeight: 'bold', // This makes the text bold
     },
@@ -153,74 +101,46 @@ function StaredItems({state, dispatch, navigation}) {
     },
   });
 
-  const isPdfList = state.pdfVersionList;
-  const list = isPdfList ? state.staredPdfs : state.staredTextBanis;
-
   return (
     <View style={staredStyles.container}>
       <Text style={staredStyles.title}>Stared Items: {list.length}</Text>
       <View style={staredStyles.scroll}>
-        <FlatList
-          keyExtractor={item => item} //name of each item like 'Bai Vaara'
-          data={list}
-          initialNumToRender={30}
-          renderItem={({item}) => {
-            const fullObj = isPdfList ? state.allPdfs : state.allTextBanis;
-            const baniObj = getItemFromFullPath(fullObj, item);
-            const bani_name = item[item.length - 1];
-            const title = isPdfList ? bani_name : baniObj.gurmukhiUni;
-            const path_before_bani = item.slice(0, -1);
-
-            function onBarClick() {
+        {list.length === 0 ? null : (
+          <FlashList
+            keyExtractor={item => item.fullPath[item.fullPath.length - 1]} //name of each item like 'Sukhmani Sahib'
+            data={list}
+            initialNumToRender={30}
+            estimatedItemSize={list.length}
+            renderItem={({item}) => {
+              const path_before_bani = item.fullPath.slice(0, -1);
+              const bani_name = item.fullPath[item.fullPath.length - 1];
               if (isPdfList) {
-                console.log(bani_name,item)
-                navigation.navigate('OpenPdf', {
-                  pdfTitle: bani_name,
-                  fullPath: [...path_before_bani],
-                });
-              } else {
-                navigation.navigate('OpenTextBanis', {
-                  bani_token: bani_name,
-                });
+                return <PdfBar bani_name={bani_name} fullPath={path_before_bani} navigation={navigation} />;
               }
-            }
 
-            function onCheckBoxClick() {
-              if (isPdfList) {
-                dispatch(setCheckBox(bani_name, path_before_bani));
-              } else {
-                dispatch(setTxtBaniCheckBox(bani_name, path_before_bani));
-              }
-            }
-
-            function onStarClick() {
-              if (isPdfList) {
-                dispatch(setPDFStar(bani_name, path_before_bani));
-              } else {
-                dispatch(setTextBaniStar(bani_name, path_before_bani));
-              }
-            }
-
-            return (
-              <MainBar
-                state={state}
-                isFolder={false}
-                text={title}
-                onClick={onBarClick}
-                onCheckBoxClick={onCheckBoxClick}
-                checked={baniObj.checked}
-                isStared={true}
-                onStarClick={onStarClick}
-              />
-            );
-          }}
-        />
+              const baniObj = getItemFromFullPath(fullObj, item.fullPath);
+              return (
+                <TxtBaniBar
+                  bani_name={bani_name}
+                  baniObj={baniObj}
+                  fullPath={path_before_bani}
+                  navigation={navigation}
+                />
+              );
+            }}
+          />
+        )}
       </View>
     </View>
   );
 }
 
-function MainScreenButtom({state, dispatch, navigation}) {
+function MainScreenButtom({navigation}) {
+  const dispatch = useDispatch();
+  const state = useSelector(theState => theState.theReducer);
+  const darkMode = useSelector(theState => theState.theReducer.darkMode);
+  const pdfList = useSelector(theState => theState.theReducer.isPdfList);
+
   const buttomStyles = StyleSheet.create({
     container: {
       flexDirection: 'row',
@@ -228,7 +148,7 @@ function MainScreenButtom({state, dispatch, navigation}) {
     },
     pdfBtn: {
       flex: 1,
-      backgroundColor: allColors[state.darkMode].shabadPage.openShabadBtn,
+      backgroundColor: allColors[darkMode].shabadPage.openShabadBtn,
       margin: 5,
       alignItems: 'center',
       padding: 5,
@@ -237,19 +157,16 @@ function MainScreenButtom({state, dispatch, navigation}) {
     openShabadBtn: {
       flex: 1,
       margin: 5,
-      backgroundColor: allColors[state.darkMode].shabadPage.openShabadBtn,
+      backgroundColor: allColors[darkMode].shabadPage.openShabadBtn,
       alignItems: 'center',
       padding: 5,
       borderRadius: 5,
     },
   });
 
-  const pdfList = state['pdfVersionList'];
   return (
     <View style={buttomStyles.container}>
-      <TouchableOpacity
-        style={buttomStyles.pdfBtn}
-        onPress={() => dispatch(togglePDFVersionList(!pdfList))}>
+      <TouchableOpacity style={buttomStyles.pdfBtn} onPress={() => dispatch(togglePDFVersionList(!pdfList))}>
         <View
           style={{
             flexDirection: 'row',
@@ -258,19 +175,14 @@ function MainScreenButtom({state, dispatch, navigation}) {
             <Icon
               name={pdfList ? 'image-outline' : 'document-text-outline'}
               type="ionicon"
-              color={state.darkMode ? 'white' : 'black'}
+              color={darkMode ? 'white' : 'black'}
             />
           </View>
           <View style={{flex: 1}}>
-            <Switch
-              value={pdfList}
-              onValueChange={val => dispatch(togglePDFVersionList(val))}
-            />
+            <Switch value={pdfList} onValueChange={val => dispatch(togglePDFVersionList(val))} />
           </View>
         </View>
-        <Text style={{color: state.darkMode ? 'white' : 'black'}}>
-          Toggle: {pdfList ? 'PDFs' : 'Text Banis'}
-        </Text>
+        <Text style={{color: darkMode ? 'white' : 'black'}}>Toggle: {pdfList ? 'PDFs' : 'Text Banis'}</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -285,14 +197,8 @@ function MainScreenButtom({state, dispatch, navigation}) {
           });
           dispatch(addToShabadHistory(theObj));
         }}>
-        <Icon
-          name="shuffle-outline"
-          type="ionicon"
-          color={state.darkMode ? 'white' : 'black'}
-        />
-        <Text style={{color: state.darkMode ? 'white' : 'black'}}>
-          Open Random Shabad
-        </Text>
+        <Icon name="shuffle-outline" type="ionicon" color={darkMode ? 'white' : 'black'} />
+        <Text style={{color: darkMode ? 'white' : 'black'}}>Open Random Shabad</Text>
       </TouchableOpacity>
     </View>
   );

@@ -1,17 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { FlashList } from '@shopify/flash-list';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
-import { useSelector } from 'react-redux';
+import React, {useRef, useState, useEffect} from 'react';
+import {FlashList} from '@shopify/flash-list';
+import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import {useSelector} from 'react-redux';
 
-export default function DisplayVerses({ current_verses }) {
+export default function DisplayVerses({current_verses}) {
   const darkMode = useSelector(state => state.theReducer.darkMode);
   const showProgressBarForDisplayLines = useSelector(
-    state => state.theReducer.textBaniSettings.showProgressBarForDisplayLines,
+    state => state.theReducer.text_bani.showProgressBarForDisplayLines,
   );
   const baniViewDiv = useRef(null);
-  const baniInParts = useSelector(
-    state => state.theReducer.textBaniSettings.baniInParts,
-  );
+  const baniInParts = useSelector(state => state.theReducer.text_bani.baniInParts);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [currPangtiIndex, setCurrPangtiIndex] = useState(0);
   const styles = StyleSheet.create({
@@ -36,13 +34,13 @@ export default function DisplayVerses({ current_verses }) {
   });
 
   useEffect(() => {
-    baniViewDiv.current?.scrollToIndex({ index: 0 });
+    baniViewDiv.current?.scrollToIndex({index: 0});
   }, [current_verses]);
 
   function handleScroll(event) {
     let progress = 0;
     if (baniInParts) {
-      const { layoutMeasurement, contentOffset, contentSize } = event.nativeEvent;
+      const {layoutMeasurement, contentOffset, contentSize} = event.nativeEvent;
       const scrollableHeight = contentSize.height - layoutMeasurement.height;
       const currentScrollPosition = contentOffset.y;
       progress = currentScrollPosition / scrollableHeight;
@@ -50,6 +48,22 @@ export default function DisplayVerses({ current_verses }) {
       progress = currPangtiIndex / (current_verses.length - 1);
     }
     setScrollProgress(progress < 0 ? 0 : progress);
+  }
+
+  if (current_verses.length === 0) {
+    return (
+      <View style={styles.container}>
+        <Text
+          style={{
+            color: darkMode ? 'white' : 'black',
+            textAlign: 'center',
+            fontSize: 20,
+            fontWeight: 'bold',
+          }}>
+          Waiting for data...
+        </Text>
+      </View>
+    );
   }
 
   return (
@@ -63,19 +77,14 @@ export default function DisplayVerses({ current_verses }) {
         initialNumToRender={30}
         initialScrollIndex={0}
         estimatedItemSize={current_verses.length}
-        onEndReached={() => { }}
-        renderItem={({ item, index }) => {
-          return <Pantgi
-            key={index}
-            item={item}
-            index={index}
-            current_verses={current_verses}
-          />
+        onEndReached={() => {}}
+        renderItem={({item, index}) => {
+          return <Pantgi key={index} item={item} index={index} current_verses={current_verses} />;
         }}
         viewabilityConfig={{
           itemVisiblePercentThreshold: 50, // Customize percentage to trigger the visibility change
         }}
-        onViewableItemsChanged={({ viewableItems }) => {
+        onViewableItemsChanged={({viewableItems}) => {
           if (viewableItems.length > 0) {
             const lastVisibleItemIndex = viewableItems[viewableItems.length - 1].index;
             setCurrPangtiIndex(lastVisibleItemIndex); // Set the last visible pangti index
@@ -84,34 +93,25 @@ export default function DisplayVerses({ current_verses }) {
       />
       {showProgressBarForDisplayLines && (
         <View style={styles.progressBarContainer}>
-          <View
-            style={[styles.progressBar, { width: `${scrollProgress * 100}%` }]}
-          />
+          <View style={[styles.progressBar, {width: `${scrollProgress * 100}%`}]} />
         </View>
       )}
     </View>
   );
 }
 
-function Pantgi({ item, index, current_verses }) {
+function Pantgi({item, index, current_verses}) {
   // item is object from verses array exp: ../assets/bani_data/aarti.json
-  const {
-    fontSize,
-    fontType,
-    gurmukhiOn,
-    larivaarOn,
-    translationType,
-    transliterationType,
-    visraamType,
-  } = useSelector(theState => theState.theReducer.textBaniSettings);
+  const {fontSize, fontType, gurmukhiOn, larivaarOn, translationType, transliterationType, visraamType} = useSelector(
+    theState => theState.theReducer.text_bani,
+  );
   const darkMode = useSelector(state => state.theReducer.darkMode);
   const [isLarivaar, setIsLarivaar] = useState(larivaarOn);
 
   useEffect(() => setIsLarivaar(larivaarOn), [larivaarOn]);
 
   function Spacer() {
-    const add_space =
-      item.paragraph === current_verses[index + 1]?.paragraph ? false : true;
+    const add_space = item.paragraph === current_verses[index + 1]?.paragraph ? false : true;
     if (add_space) {
       return (
         <View>
@@ -126,25 +126,17 @@ function Pantgi({ item, index, current_verses }) {
     if (!gurmukhiOn) return <></>;
     // const vis = true;
 
-    const pangti =
-      fontType === 'unicode'
-        ? item.verse.verse.unicode
-        : item.verse.verse.gurmukhi;
+    const pangti = fontType === 'unicode' ? item.verse.verse.unicode : item.verse.verse.gurmukhi;
 
     const words = pangti.split(' ');
 
-    const larivaarLine =
-      fontType === 'unicode'
-        ? pangti.replace(/ /g, '')
-        : item.verse.larivaar.gurmukhi;
+    const larivaarLine = fontType === 'unicode' ? pangti.replace(/ /g, '') : item.verse.larivaar.gurmukhi;
 
     const visraams = new Map();
     try {
-      item.verse.visraam[visraamType].forEach(obj =>
-        visraams.set(obj.p, obj.t),
-      );
+      item.verse.visraam[visraamType].forEach(obj => visraams.set(obj.p, obj.t));
     } catch (e) {
-      // console.log(e);
+      console.log(e);
     }
 
     return (
@@ -162,7 +154,7 @@ function Pantgi({ item, index, current_verses }) {
               wordColor = type === 'v' ? 'green' : 'orange';
             }
             return (
-              <Text key={i} style={{ color: wordColor }}>
+              <Text key={i} style={{color: wordColor}}>
                 {word}
                 {!isLarivaar && i < words.length - 1 ? ' ' : ''}
               </Text>
@@ -181,9 +173,7 @@ function Pantgi({ item, index, current_verses }) {
 
     const list = [];
     if (en) {
-      list.push(
-        <Text style={{ color: darkMode ? 'white' : 'black' }}> {en} </Text>,
-      );
+      list.push(<Text style={{color: darkMode ? 'white' : 'black'}}> {en} </Text>);
     }
     if (pu) {
       list.push(
@@ -197,9 +187,7 @@ function Pantgi({ item, index, current_verses }) {
       );
     }
     if (es) {
-      list.push(
-        <Text style={{ color: darkMode ? 'white' : 'black' }}> {es} </Text>,
-      );
+      list.push(<Text style={{color: darkMode ? 'white' : 'black'}}> {es} </Text>);
     }
     return list;
   }
@@ -207,7 +195,7 @@ function Pantgi({ item, index, current_verses }) {
   function TransliterationLine() {
     if (item.verse.transliteration[transliterationType]) {
       return (
-        <Text style={{ color: darkMode ? 'white' : 'black', padding: 3 }}>
+        <Text style={{color: darkMode ? 'white' : 'black', padding: 3}}>
           {item.verse.transliteration[transliterationType]}
         </Text>
       );

@@ -13,7 +13,7 @@ export function BarOption({
   right,
   onClick,
   onLongPress,
-  state,
+  darkMode,
   height,
   fontSize,
 }) {
@@ -27,7 +27,7 @@ export function BarOption({
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: state.darkMode ? '#04293A' : '#ACDDDE',
+      backgroundColor: darkMode ? '#04293A' : '#ACDDDE',
       width: WIDTH,
       alignContent: 'space-between',
     },
@@ -41,7 +41,7 @@ export function BarOption({
       // flex: 1,
     },
     titleText: {
-      color: state.darkMode ? 'white' : 'black',
+      color: darkMode ? 'white' : 'black',
       padding: 5,
       // left: 12,
       fontSize: fontSize,

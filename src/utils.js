@@ -4,36 +4,6 @@ const RNFS = require('react-native-fs');
 import {allColors} from '../assets/styleForEachOption.js';
 import {RightOfHeader} from './components/rightOfHeader.js';
 
-/* async function mkdir(path) { */
-/*   await RNFS.exists(path).then(dirExists => { */
-/*     if (dirExists) { */
-/*       console.log(path + ' exists'); */
-/*     } else { */
-/*       RNFS.mkdir(path); */
-/*     } */
-/*   }); */
-/* } */
-/**/
-/* export async function downloadPDF(link) { */
-/*   let destPath = RNFS.DocumentDirectoryPath + '/'; */
-/**/
-/*   const folders = link.split('/').splice(4); */
-/*   for (let i = 0; i < folders.length - 1; i++) { */
-/*     destPath += folders[i] + '/'; */
-/*     await mkdir(destPath); */
-/*   } */
-/*   destPath += folders[folders.length - 1]; */
-/**/
-/*   let option = { */
-/*     fromUrl: link, */
-/*     toFile: destPath, */
-/*   }; */
-/*   RNFS.downloadFile(option).promise.then(res => { */
-/*     console.log(destPath); */
-/*     console.log('res -----------------------------> ', res); */
-/*   }); */
-/* } */
-
 export function deleteAllCache() {
   const pdfPath = `${RNFS.CachesDirectoryPath}`;
   RNFS.readDir(pdfPath)
@@ -77,23 +47,23 @@ const alertMsg = msg => {
 export function navigatorHearderObj(
   title,
   navigation,
-  state,
+  darkMode,
 ) {
   const showTitle = title.length > 15 ? title.slice(0, 15) + '...' : title;
   return {
     title: showTitle,
     headerStyle: {
-      backgroundColor: allColors[state.darkMode].headerColor,
+      backgroundColor: allColors[darkMode].headerColor,
       height: heightOfBar(),
     },
     headerContainerStyle: {padding: 50},
-    headerTintColor: state.darkMode ? 'white' : 'black',
+    headerTintColor: darkMode ? 'white' : 'black',
     headerTitleStyle: {
-      color: state.darkMode ? 'white' : 'black',
+      color: darkMode ? 'white' : 'black',
     },
     headerRight: () => (
       <RightOfHeader
-        state={state}
+        darkMode={darkMode}
         icons={[
           {
             name: 'open-outline',

@@ -6,34 +6,32 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {BarOption} from '../components/baroption';
 
-function SwitchBar({SettingTitle, icons, nameInState, setter}) {
+function SwitchBar({SettingTitle, icons, value, setter}) {
   const dispatch = useDispatch();
-  const state = useSelector(theState => theState.theReducer);
+  const darkMode = useSelector(theState => theState.theReducer.darkMode);
   function capitalizeFirstLetter(str) {
     const string = String(str);
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-  const settingOnOff = state[nameInState];
 
   return (
     <BarOption
-      state={state}
-      height={95}
+      darkMode={darkMode}
       left={
         <Icon
-          name={settingOnOff ? icons[0] : icons[1]}
+          name={value ? icons[0] : icons[1]}
           type="ionicon"
-          color={state.darkMode ? 'white' : 'black'}
+          color={darkMode ? 'white' : 'black'}
         />
       }
       text={SettingTitle}
       right={
         <View>
-          <Text style={{color: state.darkMode ? 'white' : 'black'}}>
-            {capitalizeFirstLetter(settingOnOff)}
+          <Text style={{color: darkMode ? 'white' : 'black'}}>
+            {capitalizeFirstLetter(value)}
           </Text>
           <Switch
-            value={settingOnOff}
+            value={value}
             onValueChange={newSetting => {
               dispatch(setter(newSetting));
             }}
@@ -41,8 +39,7 @@ function SwitchBar({SettingTitle, icons, nameInState, setter}) {
         </View>
       }
       onClick={() => {
-        // console.log(SettingTitle, ':', settingOnOff);
-        dispatch(setter(!settingOnOff));
+        dispatch(setter(!value));
       }}
     />
   );

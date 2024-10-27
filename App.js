@@ -7,14 +7,14 @@ import {Provider} from 'react-redux';
 import {Store} from './redux/store';
 
 import HomeScreen from './src/HomeScreen.js';
-import PdfListScreen from './src/PdfListScreen.js';
-import {TextBanisListScreen} from './src/TextBanisListScreen.js';
-import OpenPdfScreen from './src/OpenPdfScreen.js';
-import SettingsPage from './src/settingsPage/settings';
-import {ShabadScreen} from './src/shabadPage/shabadPage.js';
-import ReadShabad from './src/shabadPage/readShabad.js';
-import AddedPDFsScreen from './src/AddedPdfsScreen.js';
-import OpenTxtBaniScreen from './src/textBaniPage/OpenTxtBaniScreen.js';
+import PdfListScreen from './src/listPdf/PdfListScreen.js';
+import TextBanisListScreen from './src/listTextBani/TextBanisListScreen.js';
+import OpenPdfScreen from './src/PdfView/OpenPdfScreen.js';
+import SettingsPage from './src/settings/settings.js';
+import {ShabadScreen} from './src/randomShabad/shabadPage.js';
+import ReadShabad from './src/randomShabad/readShabad.js';
+import AddedPDFsScreen from './src/AddedPdfs/AddedPdfsScreen.js';
+import OpenTxtBaniScreen from './src/TextBaniView/OpenTxtBaniScreen.js';
 
 const Stack = createStackNavigator();
 

@@ -11,15 +11,15 @@ import {
 } from 'react-native';
 import {Icon} from 'react-native-elements';
 import {Slider} from '@miblanchard/react-native-slider';
-import {RightOfHeader} from './components/rightOfHeader.js';
+import {RightOfHeader} from '../components/rightOfHeader.js';
 
 import Pdf from 'react-native-pdf';
 import {useSelector, useDispatch} from 'react-redux';
-import {setAngNum} from '../redux/actions.js';
-import {allColors} from '../assets/styleForEachOption.js';
-import {getItemFromFullPath} from '../assets/helper_funcs.js';
-import PdfInfoModal from './PdfView/PdfInfoModal.js';
-import {isPortrait} from './utils.js';
+import {setAngNum} from '../../redux/actions.js';
+import {allColors} from '../../assets/styleForEachOption.js';
+import {getItemFromFullPath} from '../../assets/helper_funcs.js';
+import PdfInfoModal from './PdfInfoModal.js';
+import {isPortrait} from '../utils.js';
 
 export default function OpenPdfScreen({navigation, route}) {
   const [totalAngs, setTotalAngs] = React.useState(0);
@@ -36,7 +36,7 @@ export default function OpenPdfScreen({navigation, route}) {
   const {pdfTitle} = route.params;
   const {fullPath} = route.params;
   const fileObj = getItemFromFullPath(state.pdf.allPdfs, [...fullPath, pdfTitle]);
-  console.log({fileObj})
+  console.log({fileObj});
 
   const sourceFileName = {
     uri: fileObj.uri,
@@ -132,15 +132,7 @@ export default function OpenPdfScreen({navigation, route}) {
   );
 }
 
-function Header({
-  title,
-  currentAng,
-  totalAngs,
-  state,
-  navigation,
-  pdfRef,
-  setPdfModal,
-}) {
+function Header({title, currentAng, totalAngs, state, navigation, pdfRef, setPdfModal}) {
   const [textInput, setInput] = React.useState('');
   const [range, setRange] = React.useState('');
   const angNumFontSize = 25;
@@ -207,15 +199,8 @@ function Header({
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          style={styles.headerBtns}>
-          <Icon
-            name="arrow-back-outline"
-            size={iconsSize}
-            type="ionicon"
-            color={state.darkMode ? 'white' : 'black'}
-          />
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.headerBtns}>
+          <Icon name="arrow-back-outline" size={iconsSize} type="ionicon" color={state.darkMode ? 'white' : 'black'} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => setPdfModal(true)}>
           <Text style={styles.title}>{showTitle}</Text>
@@ -262,9 +247,7 @@ function Header({
       <View style={styles.slider}>
         <Slider
           value={currentAng / totalAngs}
-          onValueChange={value =>
-            pdfRef.current.setPage(Math.round(value * totalAngs))
-          }
+          onValueChange={value => pdfRef.current.setPage(Math.round(value * totalAngs))}
         />
       </View>
     </View>
