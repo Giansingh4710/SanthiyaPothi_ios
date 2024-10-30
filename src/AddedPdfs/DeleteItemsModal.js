@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlashList} from '@shopify/flash-list';
 import {Text, StyleSheet, TouchableOpacity, View, Modal, Alert} from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
+// import CheckBox from '@react-native-community/checkbox';
 import {Icon} from 'react-native-elements';
 import {allColors} from '../../assets/styleForEachOption.js';
 import {getItemFromFullPath} from '../../assets/helper_funcs.js';
@@ -64,7 +64,6 @@ export default function DeleteItemsModal({visible, setVisibility, fullPath}) {
                   return (
                     <BarOption
                       darkMode={darkMode}
-                      // height={95}
                       left={
                         <Icon
                           name={isFolder ? 'folder-outline' : 'document-outline'}
@@ -73,17 +72,7 @@ export default function DeleteItemsModal({visible, setVisibility, fullPath}) {
                         />
                       }
                       text={item}
-                      right={
-                        <CheckBox
-                          value={checksLst[index]}
-                          onValueChange={newValue =>
-                            setChecksLst(oldLst => {
-                              oldLst[index] = newValue;
-                              return [...oldLst];
-                            })
-                          }
-                        />
-                      }
+                      // right={ <CheckBox value={checksLst[index]} onValueChange={newValue => setChecksLst(oldLst => { oldLst[index] = newValue; return [...oldLst]; }) } /> }
                       onClick={() => {
                         const oldCheckVal = checksLst[index];
                         setChecksLst(oldLst => {

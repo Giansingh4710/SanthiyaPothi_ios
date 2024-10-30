@@ -8,22 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* SanthiyaPothiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SanthiyaPothiTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-SanthiyaPothi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-SanthiyaPothi.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		33F9F38F99414B608ADD4E82 /* AmrLipiHeavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7732878A1F249C39FD659D5 /* AmrLipiHeavy.ttf */; };
-		3E8D3958FB2D4BDDB2CFC0FE /* GHW Adhiapak Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBD9D468557C4BA68A3F230E /* GHW Adhiapak Book.ttf */; };
-		3F86748E4FFA4054B125836C /* Choti Script 7 Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 980603AEE157462090B2161C /* Choti Script 7 Bold.ttf */; };
-		57C60238DBF0412A9E72A5E0 /* GHW Adhiapak Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BF39ADF233B46D59A0BD4D8 /* GHW Adhiapak Black.ttf */; };
-		5A7F0EFBB56F4E6E8546BA3E /* GHW Adhiapak Chisel Blk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6670E43B89C4CC9903CF9F0 /* GHW Adhiapak Chisel Blk.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a */; };
+		56FE84F296D8DFF1E2459612 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		7D226952DE3AF9CE4BF08C78 /* libPods-SanthiyaPothi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 382094A8E031BBDB89740794 /* libPods-SanthiyaPothi.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8F8BB6008BA24CE1AE7C85F7 /* AnmolLipi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C576AF6D4E1045F58A2D003C /* AnmolLipi.ttf */; };
-		941767AFF08742C89E5F5FBF /* GHW Adhiapak Extra Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42A057659A5D4E8AB96FB184 /* GHW Adhiapak Extra Light.ttf */; };
-		AB482152173E49EB98CC96C9 /* GHW Adhiapak Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C115DE4C3A44E50A6AC5A89 /* GHW Adhiapak Bold.ttf */; };
-		B688A07C7F534255946D97F9 /* GHW Adhiapak Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 385FF25D8F6644C083D125BD /* GHW Adhiapak Medium.ttf */; };
-		C4CD121CD7424A91906EC3F9 /* GHW Adhiapak Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 795D5C3ECBA841AEBD08B5D8 /* GHW Adhiapak Light.ttf */; };
+		A0E9F5F02CD0648A00BA0787 /* react_native_pdf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9F5EF2CD0648A00BA0787 /* react_native_pdf.framework */; };
+		A0E9F5F12CD0648A00BA0787 /* react_native_pdf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9F5EF2CD0648A00BA0787 /* react_native_pdf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0E9F5F42CD08DB700BA0787 /* react_native_pdf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9F5F32CD08DB700BA0787 /* react_native_pdf.framework */; };
+		A0E9F5F52CD08DB700BA0787 /* react_native_pdf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9F5F32CD08DB700BA0787 /* react_native_pdf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F5F1B09D420654B8FD7B5452 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B8FFA1D0C8D33515F34AB9 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +31,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A0E9F5F22CD0648A00BA0787 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A0E9F5F52CD08DB700BA0787 /* react_native_pdf.framework in Embed Frameworks */,
+				A0E9F5F12CD0648A00BA0787 /* react_native_pdf.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		00B8FFA1D0C8D33515F34AB9 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SanthiyaPothi-SanthiyaPothiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356EE1AD99517003FC87E /* SanthiyaPothiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SanthiyaPothiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SanthiyaPothiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SanthiyaPothiTests.m; sourceTree = "<group>"; };
@@ -46,24 +57,17 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SanthiyaPothi/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SanthiyaPothi/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SanthiyaPothi/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SanthiyaPothi-SanthiyaPothiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		385FF25D8F6644C083D125BD /* GHW Adhiapak Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Medium.ttf"; path = "../assets/fonts/GHW Adhiapak Medium.ttf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-SanthiyaPothi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi.debug.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi.debug.xcconfig"; sourceTree = "<group>"; };
-		3BF39ADF233B46D59A0BD4D8 /* GHW Adhiapak Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Black.ttf"; path = "../assets/fonts/GHW Adhiapak Black.ttf"; sourceTree = "<group>"; };
-		42A057659A5D4E8AB96FB184 /* GHW Adhiapak Extra Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Extra Light.ttf"; path = "../assets/fonts/GHW Adhiapak Extra Light.ttf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-SanthiyaPothi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi.release.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-SanthiyaPothi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SanthiyaPothi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		795D5C3ECBA841AEBD08B5D8 /* GHW Adhiapak Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Light.ttf"; path = "../assets/fonts/GHW Adhiapak Light.ttf"; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = SanthiyaPothi/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1F6AB1165EDCC92CA9833CAC /* Pods-SanthiyaPothi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi.debug.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi.debug.xcconfig"; sourceTree = "<group>"; };
+		382094A8E031BBDB89740794 /* libPods-SanthiyaPothi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SanthiyaPothi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C694E01F7A0B80115079A6 /* Pods-SanthiyaPothi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi.release.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi.release.xcconfig"; sourceTree = "<group>"; };
+		7DD13DEDB99D789641846070 /* Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SanthiyaPothi/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig"; sourceTree = "<group>"; };
-		980603AEE157462090B2161C /* Choti Script 7 Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Choti Script 7 Bold.ttf"; path = "../assets/fonts/Choti Script 7 Bold.ttf"; sourceTree = "<group>"; };
-		9C115DE4C3A44E50A6AC5A89 /* GHW Adhiapak Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Bold.ttf"; path = "../assets/fonts/GHW Adhiapak Bold.ttf"; sourceTree = "<group>"; };
-		A7732878A1F249C39FD659D5 /* AmrLipiHeavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AmrLipiHeavy.ttf; path = ../assets/fonts/AmrLipiHeavy.ttf; sourceTree = "<group>"; };
-		C576AF6D4E1045F58A2D003C /* AnmolLipi.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AnmolLipi.ttf; path = ../assets/fonts/AnmolLipi.ttf; sourceTree = "<group>"; };
+		A0BCA7BD2CD1ADD300978523 /* SanthiyaPothi copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SanthiyaPothi copy-Info.plist"; path = "/Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/SanthiyaPothi copy-Info.plist"; sourceTree = "<absolute>"; };
+		A0E9F5EF2CD0648A00BA0787 /* react_native_pdf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = react_native_pdf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E9F5F32CD08DB700BA0787 /* react_native_pdf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = react_native_pdf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8F7F3965D2BA07EA77B0606 /* Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig"; path = "Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F6670E43B89C4CC9903CF9F0 /* GHW Adhiapak Chisel Blk.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Chisel Blk.ttf"; path = "../assets/fonts/GHW Adhiapak Chisel Blk.ttf"; sourceTree = "<group>"; };
-		FBD9D468557C4BA68A3F230E /* GHW Adhiapak Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GHW Adhiapak Book.ttf"; path = "../assets/fonts/GHW Adhiapak Book.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a in Frameworks */,
+				F5F1B09D420654B8FD7B5452 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-SanthiyaPothi.a in Frameworks */,
+				A0E9F5F02CD0648A00BA0787 /* react_native_pdf.framework in Frameworks */,
+				A0E9F5F42CD08DB700BA0787 /* react_native_pdf.framework in Frameworks */,
+				7D226952DE3AF9CE4BF08C78 /* libPods-SanthiyaPothi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +118,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 			);
 			name = SanthiyaPothi;
 			sourceTree = "<group>";
@@ -119,29 +126,13 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0E9F5F32CD08DB700BA0787 /* react_native_pdf.framework */,
+				A0E9F5EF2CD0648A00BA0787 /* react_native_pdf.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-SanthiyaPothi.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a */,
+				382094A8E031BBDB89740794 /* libPods-SanthiyaPothi.a */,
+				00B8FFA1D0C8D33515F34AB9 /* libPods-SanthiyaPothi-SanthiyaPothiTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6DC6B0D718754711AD837BB0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A7732878A1F249C39FD659D5 /* AmrLipiHeavy.ttf */,
-				C576AF6D4E1045F58A2D003C /* AnmolLipi.ttf */,
-				980603AEE157462090B2161C /* Choti Script 7 Bold.ttf */,
-				3BF39ADF233B46D59A0BD4D8 /* GHW Adhiapak Black.ttf */,
-				9C115DE4C3A44E50A6AC5A89 /* GHW Adhiapak Bold.ttf */,
-				FBD9D468557C4BA68A3F230E /* GHW Adhiapak Book.ttf */,
-				F6670E43B89C4CC9903CF9F0 /* GHW Adhiapak Chisel Blk.ttf */,
-				42A057659A5D4E8AB96FB184 /* GHW Adhiapak Extra Light.ttf */,
-				795D5C3ECBA841AEBD08B5D8 /* GHW Adhiapak Light.ttf */,
-				385FF25D8F6644C083D125BD /* GHW Adhiapak Medium.ttf */,
-			);
-			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -160,7 +151,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				6DC6B0D718754711AD837BB0 /* Resources */,
+				A0BCA7BD2CD1ADD300978523 /* SanthiyaPothi copy-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -179,10 +170,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-SanthiyaPothi.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-SanthiyaPothi.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig */,
+				1F6AB1165EDCC92CA9833CAC /* Pods-SanthiyaPothi.debug.xcconfig */,
+				75C694E01F7A0B80115079A6 /* Pods-SanthiyaPothi.release.xcconfig */,
+				7DD13DEDB99D789641846070 /* Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig */,
+				C8F7F3965D2BA07EA77B0606 /* Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -194,12 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SanthiyaPothiTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				0E5F6047494441E94D1AD3C4 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				7502C36762C71C1A78B61688 /* [CP] Embed Pods Frameworks */,
+				5C294AFC9EE87233A51936F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,14 +206,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SanthiyaPothi" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
-				FD10A7F022414F080027D42C /* Start Packager */,
+				4D119C1E8B0146AE4CCE03D2 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				A0E9F5F22CD0648A00BA0787 /* Embed Frameworks */,
+				223EEB1D794D7EFD30455EBA /* [CP] Embed Pods Frameworks */,
+				FDF754104ADE48E1E95959CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,16 +274,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				33F9F38F99414B608ADD4E82 /* AmrLipiHeavy.ttf in Resources */,
-				8F8BB6008BA24CE1AE7C85F7 /* AnmolLipi.ttf in Resources */,
-				3F86748E4FFA4054B125836C /* Choti Script 7 Bold.ttf in Resources */,
-				57C60238DBF0412A9E72A5E0 /* GHW Adhiapak Black.ttf in Resources */,
-				AB482152173E49EB98CC96C9 /* GHW Adhiapak Bold.ttf in Resources */,
-				3E8D3958FB2D4BDDB2CFC0FE /* GHW Adhiapak Book.ttf in Resources */,
-				5A7F0EFBB56F4E6E8546BA3E /* GHW Adhiapak Chisel Blk.ttf in Resources */,
-				941767AFF08742C89E5F5FBF /* GHW Adhiapak Extra Light.ttf in Resources */,
-				C4CD121CD7424A91906EC3F9 /* GHW Adhiapak Light.ttf in Resources */,
-				B688A07C7F534255946D97F9 /* GHW Adhiapak Medium.ttf in Resources */,
+				56FE84F296D8DFF1E2459612 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,26 +295,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		0E5F6047494441E94D1AD3C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,7 +319,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		223EEB1D794D7EFD30455EBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D119C1E8B0146AE4CCE03D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,41 +358,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		5C294AFC9EE87233A51936F3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -427,23 +375,38 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD10A7F022414F080027D42C /* Start Packager */ = {
+		7502C36762C71C1A78B61688 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
-			name = "Start Packager";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDF754104ADE48E1E95959CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -479,7 +442,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig */;
+			baseConfigurationReference = 7DD13DEDB99D789641846070 /* Pods-SanthiyaPothi-SanthiyaPothiTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -487,7 +450,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = SanthiyaPothiTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,12 +469,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig */;
+			baseConfigurationReference = C8F7F3965D2BA07EA77B0606 /* Pods-SanthiyaPothi-SanthiyaPothiTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = SanthiyaPothiTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,71 +493,54 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-SanthiyaPothi.debug.xcconfig */;
+			baseConfigurationReference = 1F6AB1165EDCC92CA9833CAC /* Pods-SanthiyaPothi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = UXX67B9ASA;
+				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SanthiyaPothi/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Santhiya Pothi";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.santhiyapothi;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SanthiyaPothi;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-SanthiyaPothi.release.xcconfig */;
+			baseConfigurationReference = 75C694E01F7A0B80115079A6 /* Pods-SanthiyaPothi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = UXX67B9ASA;
-				ENABLE_BITCODE = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = SanthiyaPothi/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Santhiya Pothi";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.santhiyapothi;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SanthiyaPothi;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -604,7 +550,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -630,10 +576,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				"CURRENT_PROJECT_VERSION[sdk=*]" = 1.1.0;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphone*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -649,7 +595,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"${PODS_ROOT}",
+					"${SRCROOT}/../../../ios/Pods/Headers/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -659,7 +621,6 @@
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
-				"MARKETING_VERSION[sdk=*]" = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -667,9 +628,17 @@
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -678,7 +647,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -704,10 +673,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				"CURRENT_PROJECT_VERSION[sdk=*]" = 1.1.0;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphone*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -716,7 +685,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"${PODS_ROOT}",
+					"${SRCROOT}/../../../ios/Pods/Headers/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -726,16 +711,22 @@
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
-				"MARKETING_VERSION[sdk=*]" = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

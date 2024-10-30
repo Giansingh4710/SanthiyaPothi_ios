@@ -7,6 +7,7 @@ import {
   View,
   TouchableOpacity,
   Dimensions,
+  TextInput
 } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Icon, Switch} from 'react-native-elements';
@@ -16,7 +17,6 @@ import {addToShabadHistory, clearHistory} from '../../redux/actions';
 import {RightOfHeader} from '../components/rightOfHeader.js';
 import {ALLSHABADS} from '../../assets/allShabads.js';
 import {BarOption} from '../components/baroption.js';
-import {TextInput} from 'react-native-gesture-handler';
 
 export function ShabadScreen({navigation}) {
   const dispatch = useDispatch();

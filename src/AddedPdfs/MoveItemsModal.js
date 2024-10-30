@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {FlatList, Text, StyleSheet, TouchableOpacity, View, Modal, Alert} from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
+// import CheckBox from '@react-native-community/checkbox';
 import {Icon} from 'react-native-elements';
 import {allColors} from '../../assets/styleForEachOption.js';
 import {getItemFromFullPath} from '../../assets/helper_funcs.js';
@@ -73,17 +73,7 @@ export default function MoveItemsModal({visible, setVisibility, fullPath}) {
                         />
                       }
                       text={item}
-                      right={
-                        <CheckBox
-                          value={checksLst[index]}
-                          onValueChange={newValue =>
-                            setChecksLst(oldLst => {
-                              oldLst[index] = newValue;
-                              return [...oldLst];
-                            })
-                          }
-                        />
-                      }
+                      // right={ <CheckBox value={checksLst[index]} onValueChange={newValue => setChecksLst(oldLst => { oldLst[index] = newValue; return [...oldLst]; }) } /> }
                       onClick={() => {
                         const oldCheckVal = checksLst[index];
                         setChecksLst(oldLst => {
@@ -158,7 +148,7 @@ function MoveItemsToModal({visible, setVisibility, folders, checkedFolder, setCh
                       darkMode={darkMode}
                       left={<Icon name="folder-outline" type="ionicon" color={darkMode ? 'white' : 'black'} />}
                       text={item}
-                      right={<CheckBox value={checkedFolder === item} onValueChange={() => handleClick(item)} />}
+                      // right={<CheckBox value={checkedFolder === item} onValueChange={() => handleClick(item)} />}
                       onClick={() => handleClick(item)}
                     />
                   );
