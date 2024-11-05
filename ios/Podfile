@@ -1,53 +1,63 @@
-require_relative '../node_modules/react-native/scripts/react_native_pods'
-require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
-# Add these lines for header search paths
-pod 'React', :path => '../node_modules/react-native/'
-pod 'React-Core', :path => '../node_modules/react-native/'
-pod 'React-RCTAppDelegate', :path => '../node_modules/react-native/Libraries/AppDelegate'
-
-use_frameworks! :linkage => :static
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
 
 target 'SanthiyaPothi' do
   config = use_native_modules!
+
+  pod 'RCT-Folly', :podspec => '../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec', :modular_headers => true
 
   use_react_native!(
     :path => config[:reactNativePath],
     :hermes_enabled => true,
     :fabric_enabled => false,
-    :app_path => "#{Pod::Config.instance.installation_root}/.."
+    :app_path => "#{Pod::Config.instance.installation_root}/..",
   )
 
   target 'SanthiyaPothiTests' do
     inherit! :complete
+    # Pods for testing
   end
 
   post_install do |installer|
     react_native_post_install(
       installer,
       config[:reactNativePath],
-      :mac_catalyst_enabled => false
+      :mac_catalyst_enabled => false,
     )
-    
+
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.4'
-        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = ''
-        config.build_settings['ONLY_ACTIVE_ARCH'] = 'YES'
-        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-        
-        # Add these specific header search paths
-        config.build_settings['HEADER_SEARCH_PATHS'] = [
-          '$(inherited)',
-          '${PODS_ROOT}/Headers/Public/React-Core',
-          '${PODS_ROOT}/Headers/Public/React-RCTAppDelegate',
-          '$(SRCROOT)/../node_modules/react-native/React',
-          '$(PODS_ROOT)/Headers/Public'
-        ]
+        config.build_settings['HEADER_SEARCH_PATHS'] ||= '$(inherited)'
+        config.build_settings['HEADER_SEARCH_PATHS'] << '${PODS_ROOT}/glog/src'
+        config.build_settings['HEADER_SEARCH_PATHS'] << '${PODS_ROOT}/Headers/Public/glog'
       end
     end
+
+    # Manually create or copy a config.h file in the glog src directory
+    `mkdir -p Pods/glog/src`
+    File.open("Pods/glog/src/config.h", "w") do |file|
+      file.write <<~EOF
+        #ifndef GLOG_CONFIG_H_
+        #define GLOG_CONFIG_H_
+
+        #define HAVE_PTHREAD 1
+        #define GOOGLE_GLOG_DLL_DECL
+
+        #endif  // GLOG_CONFIG_H_
+      EOF
+    end
   end
+
 end

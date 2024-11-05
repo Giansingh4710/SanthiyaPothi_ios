@@ -1,0 +1,19 @@
+Xcode errors:
+  Error:
+    Library 'DoubleConversion' not found
+  Solution:
+    To fix it you need to check "Build Settings" -> "Targets" -> "Architectures" -> "Excluded Architectures" and verify that arm64 NOT excluded from the project, if it excluded you should remove it for running simulator on m1 chip.
+  From:
+    https://stackoverflow.com/questions/50562596/library-not-found-for-ldoubleconversion
+
+  Error:
+    React/RCTBridgeDelegate.h' file not found
+  From:
+    https://stackoverflow.com/questions/56916798/react-rctbridgedelegate-h-file-not-found
+
+
+  Error:
+    'config.h' file not found
+    /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/Pods/glog/src/base/mutex.h:105:10 'config.h' file not found
+  From:
+    https://stackoverflow.com/questions/50836558/react-native-config-h-not-found
