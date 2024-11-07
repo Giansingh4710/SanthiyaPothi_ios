@@ -1,3 +1,4 @@
+# Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
     "react-native/scripts/react_native_pods.rb",
@@ -16,13 +17,10 @@ end
 target 'SanthiyaPothi' do
   config = use_native_modules!
 
-  pod 'RCT-Folly', :podspec => '../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec', :modular_headers => true
-
   use_react_native!(
     :path => config[:reactNativePath],
-    :hermes_enabled => true,
-    :fabric_enabled => false,
-    :app_path => "#{Pod::Config.instance.installation_root}/..",
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
   target 'SanthiyaPothiTests' do
@@ -31,33 +29,12 @@ target 'SanthiyaPothi' do
   end
 
   post_install do |installer|
+    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,
       config[:reactNativePath],
       :mac_catalyst_enabled => false,
+      # :ccache_enabled => true
     )
-
-    installer.pods_project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['HEADER_SEARCH_PATHS'] ||= '$(inherited)'
-        config.build_settings['HEADER_SEARCH_PATHS'] << '${PODS_ROOT}/glog/src'
-        config.build_settings['HEADER_SEARCH_PATHS'] << '${PODS_ROOT}/Headers/Public/glog'
-      end
-    end
-
-    # Manually create or copy a config.h file in the glog src directory
-    `mkdir -p Pods/glog/src`
-    File.open("Pods/glog/src/config.h", "w") do |file|
-      file.write <<~EOF
-        #ifndef GLOG_CONFIG_H_
-        #define GLOG_CONFIG_H_
-
-        #define HAVE_PTHREAD 1
-        #define GOOGLE_GLOG_DLL_DECL
-
-        #endif  // GLOG_CONFIG_H_
-      EOF
-    end
   end
-
 end

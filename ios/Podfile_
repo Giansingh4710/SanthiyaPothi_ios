@@ -1,0 +1,42 @@
+platform :ios, '15.1'
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+use_frameworks! :linkage => :static
+
+target 'SanthiyaPothi' do
+  config = use_native_modules!
+
+  $RNFirebaseAsStaticFramework = true
+  
+  # Flags change depending on the env values.
+  flags = get_default_flags()
+
+  # Core React Native setup
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # Explicitly disabling Flipper
+    :hermes_enabled => flags[:hermes_enabled],
+    :fabric_enabled => flags[:fabric_enabled],
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  # Manually add RNFlashList
+  pod 'RNFlashList', :path => '../node_modules/@shopify/flash-list'
+  
+  # Post install processing
+  post_install do |installer|
+    react_native_post_install(installer)
+
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        # Exclude arm64 for simulators on Apple Silicon Macs
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+        
+        # Ensure folly paths are set up correctly
+        config.build_settings['HEADER_SEARCH_PATHS'] ||= '$(inherited)'
+        config.build_settings['HEADER_SEARCH_PATHS'] << ' "$(PODS_ROOT)/Headers/Public/**"'
+      end
+    end
+  end
+end

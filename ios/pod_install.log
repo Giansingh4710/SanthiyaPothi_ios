@@ -1,0 +1,1031 @@
+  $ /Users/gians/.nvm/versions/node/v18.17.0/bin/node -p require.resolve(     "react-native/scripts/react_native_pods.rb",     {paths: [process.argv[1]]},   ) /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios
+  /Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native/scripts/react_native_pods.rb
+Found 12 modules for target `SanthiyaPothi`
+link_native_modules! {:ios_packages=>[{:configurations=>[], :name=>"@react-native-async-storage/async-storage", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/@react-native-async-storage/async-storage", :path=>"../node_modules/@react-native-async-storage/async-storage", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"@react-native-clipboard/clipboard", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/@react-native-clipboard/clipboard", :path=>"../node_modules/@react-native-clipboard/clipboard", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/@react-native-clipboard/clipboard/RNCClipboard.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"@react-native-picker/picker", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/@react-native-picker/picker", :path=>"../node_modules/@react-native-picker/picker", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/@react-native-picker/picker/RNCPicker.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-blob-util", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-blob-util", :path=>"../node_modules/react-native-blob-util", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-blob-util/react-native-blob-util.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-document-picker", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-document-picker", :path=>"../node_modules/react-native-document-picker", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-document-picker/react-native-document-picker.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-fs", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-fs", :path=>"../node_modules/react-native-fs", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-fs/RNFS.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-gesture-handler", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-gesture-handler", :path=>"../node_modules/react-native-gesture-handler", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-gesture-handler/RNGestureHandler.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-pdf", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-pdf", :path=>"../node_modules/react-native-pdf", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-pdf/react-native-pdf.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-reanimated", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-reanimated", :path=>"../node_modules/react-native-reanimated", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-reanimated/RNReanimated.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-restart", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-restart", :path=>"../node_modules/react-native-restart", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-restart/react-native-restart.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-safe-area-context", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-safe-area-context", :path=>"../node_modules/react-native-safe-area-context", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec", :script_phases=>[]}, {:configurations=>[], :name=>"react-native-screens", :root=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-screens", :path=>"../node_modules/react-native-screens", :podspec_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native-screens/RNScreens.podspec", :script_phases=>[]}], :ios_project_root_path=>"/Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios", :react_native_path=>"../node_modules/react-native"}
+Auto-linking React Native modules for target `SanthiyaPothi`: RNCAsyncStorage, RNCClipboard, RNCPicker, RNFS, RNGestureHandler, RNReanimated, RNScreens, react-native-blob-util, react-native-document-picker, react-native-pdf, react-native-restart, and react-native-safe-area-context
+Framework build type is static library
+[Codegen] Adding script_phases to ReactCodegen.
+  $ /bin/mkdir -p ./build/generated/ios
+[Codegen] Generating ./build/generated/ios/ReactCodegen.podspec.json
+  $ /Users/gians/.nvm/versions/node/v18.17.0/bin/node ./../node_modules/react-native/scripts/generate-codegen-artifacts.js -p /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/.. -o /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios -t ios
+  [Codegen] Analyzing /Users/gians/Desktop/dev/mobile/SanthiyaPothi/package.json
+  [Codegen] Searching for codegen-enabled libraries in the app.
+  [Codegen] The "codegenConfig" field is not defined in package.json. Assuming there is nothing to generate at the app level.
+  [Codegen] Searching for codegen-enabled libraries in the project dependencies.
+  [Codegen] Found @react-native-async-storage/async-storage
+  [Codegen] Found @react-native-clipboard/clipboard
+  [Codegen] Found @react-native-picker/picker
+  [Codegen] Found @shopify/flash-list
+  [Codegen] Found react-native
+  [Codegen] Found react-native-blob-util
+  [Codegen] Found react-native-document-picker
+  [Codegen] Found react-native-gesture-handler
+  [Codegen] Found react-native-pdf
+  [Codegen] Found react-native-reanimated
+  [Codegen] Found react-native-safe-area-context
+  [Codegen] Found react-native-screens
+  
+  
+  [Codegen] >>>>> Searching for codegen-enabled libraries in react-native.config.js
+  [Codegen] Processing rnasyncstorage
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, macos, tvos, visionos for rnasyncstorage
+  [Codegen] Processing rnclipboard
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, macos, tvos, visionos for rnclipboard
+  [Codegen] Processing rnpicker
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, macos, tvos for rnpicker
+  [Codegen] Processing rnflashlist
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, tvos for rnflashlist
+  [Codegen] Processing FBReactNativeSpec
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Processing rncore
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Processing ReactNativeBlobUtilSpec
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios for ReactNativeBlobUtilSpec
+  [Codegen] Processing rndocumentpicker
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios for rndocumentpicker
+  [Codegen] Processing rngesturehandler_codegen
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, macos, tvos, visionos for rngesturehandler_codegen
+  [Codegen] Processing rnpdf
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, tvos for rnpdf
+  [Codegen] Processing rnreanimated
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, macos, tvos, visionos for rnreanimated
+  [Codegen] Processing safeareacontext
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, tvos, visionos for safeareacontext
+  [Codegen] Processing rnscreens
+  [Codegen] Searching for podspec in the project dependencies.
+  [Codegen] Supported Apple platforms: ios, tvos, visionos for rnscreens
+  [Codegen] Generating Native Code for rnasyncstorage - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for rnclipboard - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for rnpicker - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for rnflashlist - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for FBReactNativeSpec - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen - rncore] Skipping iOS code generation for rncore as it has been generated already.
+  [Codegen] Generating Native Code for ReactNativeBlobUtilSpec - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for rndocumentpicker - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for rngesturehandler_codegen - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for rnpdf - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for rnreanimated - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for safeareacontext - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Generating Native Code for rnscreens - ios
+  [Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+  [Codegen] Creating component provider.
+  [Codegen] Generated provider in: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native/React/Fabric
+  [Codegen] Done.
+[Codegen] Analyzing /Users/gians/Desktop/dev/mobile/SanthiyaPothi/package.json
+[Codegen] Searching for codegen-enabled libraries in the app.
+[Codegen] The "codegenConfig" field is not defined in package.json. Assuming there is nothing to generate at the app level.
+[Codegen] Searching for codegen-enabled libraries in the project dependencies.
+[Codegen] Found @react-native-async-storage/async-storage
+[Codegen] Found @react-native-clipboard/clipboard
+[Codegen] Found @react-native-picker/picker
+[Codegen] Found @shopify/flash-list
+[Codegen] Found react-native
+[Codegen] Found react-native-blob-util
+[Codegen] Found react-native-document-picker
+[Codegen] Found react-native-gesture-handler
+[Codegen] Found react-native-pdf
+[Codegen] Found react-native-reanimated
+[Codegen] Found react-native-safe-area-context
+[Codegen] Found react-native-screens
+
+
+[Codegen] >>>>> Searching for codegen-enabled libraries in react-native.config.js
+[Codegen] Processing rnasyncstorage
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, macos, tvos, visionos for rnasyncstorage
+[Codegen] Processing rnclipboard
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, macos, tvos, visionos for rnclipboard
+[Codegen] Processing rnpicker
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, macos, tvos for rnpicker
+[Codegen] Processing rnflashlist
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, tvos for rnflashlist
+[Codegen] Processing FBReactNativeSpec
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Processing rncore
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Processing ReactNativeBlobUtilSpec
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios for ReactNativeBlobUtilSpec
+[Codegen] Processing rndocumentpicker
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios for rndocumentpicker
+[Codegen] Processing rngesturehandler_codegen
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, macos, tvos, visionos for rngesturehandler_codegen
+[Codegen] Processing rnpdf
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, tvos for rnpdf
+[Codegen] Processing rnreanimated
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, macos, tvos, visionos for rnreanimated
+[Codegen] Processing safeareacontext
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, tvos, visionos for safeareacontext
+[Codegen] Processing rnscreens
+[Codegen] Searching for podspec in the project dependencies.
+[Codegen] Supported Apple platforms: ios, tvos, visionos for rnscreens
+[Codegen] Generating Native Code for rnasyncstorage - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for rnclipboard - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for rnpicker - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for rnflashlist - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for FBReactNativeSpec - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen - rncore] Skipping iOS code generation for rncore as it has been generated already.
+[Codegen] Generating Native Code for ReactNativeBlobUtilSpec - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for rndocumentpicker - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for rngesturehandler_codegen - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for rnpdf - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for rnreanimated - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for safeareacontext - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Generating Native Code for rnscreens - ios
+[Codegen] Generated artifacts: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/build/generated/ios
+[Codegen] Creating component provider.
+[Codegen] Generated provider in: /Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native/React/Fabric
+[Codegen] Done.
+  Preparing
+
+Analyzing dependencies
+
+Inspecting targets to integrate
+  Using `ARCHS` setting to build architectures of target `Pods-SanthiyaPothi`: (``)
+  Using `ARCHS` setting to build architectures of target `Pods-SanthiyaPothi-SanthiyaPothiTests`: (``)
+
+Fetching external sources
+-> Fetching podspec for `DoubleConversion` from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`
+-> Fetching podspec for `FBLazyVector` from `../node_modules/react-native/Libraries/FBLazyVector`
+-> Fetching podspec for `RCT-Folly` from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`
+-> Fetching podspec for `RCTDeprecation` from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`
+-> Fetching podspec for `RCTRequired` from `../node_modules/react-native/Libraries/Required`
+-> Fetching podspec for `RCTTypeSafety` from `../node_modules/react-native/Libraries/TypeSafety`
+-> Fetching podspec for `RNCAsyncStorage` from `../node_modules/@react-native-async-storage/async-storage`
+-> Fetching podspec for `RNCClipboard` from `../node_modules/@react-native-clipboard/clipboard`
+-> Fetching podspec for `RNCPicker` from `../node_modules/@react-native-picker/picker`
+-> Fetching podspec for `RNFS` from `../node_modules/react-native-fs`
+-> Fetching podspec for `RNGestureHandler` from `../node_modules/react-native-gesture-handler`
+-> Fetching podspec for `RNReanimated` from `../node_modules/react-native-reanimated`
+-> Fetching podspec for `RNScreens` from `../node_modules/react-native-screens`
+-> Fetching podspec for `React` from `../node_modules/react-native/`
+-> Fetching podspec for `React-Core` from `../node_modules/react-native/`
+-> Fetching podspec for `React-CoreModules` from `../node_modules/react-native/React/CoreModules`
+-> Fetching podspec for `React-Fabric` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `React-FabricComponents` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `React-FabricImage` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `React-ImageManager` from `../node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios`
+-> Fetching podspec for `React-Mapbuffer` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `React-NativeModulesApple` from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`
+-> Fetching podspec for `React-RCTActionSheet` from `../node_modules/react-native/Libraries/ActionSheetIOS`
+-> Fetching podspec for `React-RCTAnimation` from `../node_modules/react-native/Libraries/NativeAnimation`
+-> Fetching podspec for `React-RCTAppDelegate` from `../node_modules/react-native/Libraries/AppDelegate`
+-> Fetching podspec for `React-RCTBlob` from `../node_modules/react-native/Libraries/Blob`
+-> Fetching podspec for `React-RCTFabric` from `../node_modules/react-native/React`
+-> Fetching podspec for `React-RCTImage` from `../node_modules/react-native/Libraries/Image`
+-> Fetching podspec for `React-RCTLinking` from `../node_modules/react-native/Libraries/LinkingIOS`
+-> Fetching podspec for `React-RCTNetwork` from `../node_modules/react-native/Libraries/Network`
+-> Fetching podspec for `React-RCTSettings` from `../node_modules/react-native/Libraries/Settings`
+-> Fetching podspec for `React-RCTText` from `../node_modules/react-native/Libraries/Text`
+-> Fetching podspec for `React-RCTVibration` from `../node_modules/react-native/Libraries/Vibration`
+-> Fetching podspec for `React-RuntimeApple` from `../node_modules/react-native/ReactCommon/react/runtime/platform/ios`
+-> Fetching podspec for `React-RuntimeCore` from `../node_modules/react-native/ReactCommon/react/runtime`
+-> Fetching podspec for `React-RuntimeHermes` from `../node_modules/react-native/ReactCommon/react/runtime`
+-> Fetching podspec for `React-callinvoker` from `../node_modules/react-native/ReactCommon/callinvoker`
+-> Fetching podspec for `React-cxxreact` from `../node_modules/react-native/ReactCommon/cxxreact`
+-> Fetching podspec for `React-debug` from `../node_modules/react-native/ReactCommon/react/debug`
+-> Fetching podspec for `React-defaultsnativemodule` from `../node_modules/react-native/ReactCommon/react/nativemodule/defaults`
+-> Fetching podspec for `React-domnativemodule` from `../node_modules/react-native/ReactCommon/react/nativemodule/dom`
+-> Fetching podspec for `React-featureflags` from `../node_modules/react-native/ReactCommon/react/featureflags`
+-> Fetching podspec for `React-featureflagsnativemodule` from `../node_modules/react-native/ReactCommon/react/nativemodule/featureflags`
+-> Fetching podspec for `React-graphics` from `../node_modules/react-native/ReactCommon/react/renderer/graphics`
+-> Fetching podspec for `React-hermes` from `../node_modules/react-native/ReactCommon/hermes`
+-> Fetching podspec for `React-idlecallbacksnativemodule` from `../node_modules/react-native/ReactCommon/react/nativemodule/idlecallbacks`
+-> Fetching podspec for `React-jserrorhandler` from `../node_modules/react-native/ReactCommon/jserrorhandler`
+-> Fetching podspec for `React-jsi` from `../node_modules/react-native/ReactCommon/jsi`
+-> Fetching podspec for `React-jsiexecutor` from `../node_modules/react-native/ReactCommon/jsiexecutor`
+-> Fetching podspec for `React-jsinspector` from `../node_modules/react-native/ReactCommon/jsinspector-modern`
+-> Fetching podspec for `React-jsitracing` from `../node_modules/react-native/ReactCommon/hermes/executor/`
+-> Fetching podspec for `React-logger` from `../node_modules/react-native/ReactCommon/logger`
+-> Fetching podspec for `React-microtasksnativemodule` from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`
+-> Fetching podspec for `React-nativeconfig` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `React-perflogger` from `../node_modules/react-native/ReactCommon/reactperflogger`
+-> Fetching podspec for `React-performancetimeline` from `../node_modules/react-native/ReactCommon/react/performance/timeline`
+-> Fetching podspec for `React-rendererconsistency` from `../node_modules/react-native/ReactCommon/react/renderer/consistency`
+-> Fetching podspec for `React-rendererdebug` from `../node_modules/react-native/ReactCommon/react/renderer/debug`
+-> Fetching podspec for `React-rncore` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `React-runtimeexecutor` from `../node_modules/react-native/ReactCommon/runtimeexecutor`
+-> Fetching podspec for `React-runtimescheduler` from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`
+-> Fetching podspec for `React-timing` from `../node_modules/react-native/ReactCommon/react/timing`
+-> Fetching podspec for `React-utils` from `../node_modules/react-native/ReactCommon/react/utils`
+-> Fetching podspec for `ReactCodegen` from `build/generated/ios`
+-> Fetching podspec for `ReactCommon` from `../node_modules/react-native/ReactCommon`
+-> Fetching podspec for `Yoga` from `../node_modules/react-native/ReactCommon/yoga`
+-> Fetching podspec for `boost` from `../node_modules/react-native/third-party-podspecs/boost.podspec`
+-> Fetching podspec for `fmt` from `../node_modules/react-native/third-party-podspecs/fmt.podspec`
+-> Fetching podspec for `glog` from `../node_modules/react-native/third-party-podspecs/glog.podspec`
+-> Fetching podspec for `hermes-engine` from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`
+  $ /Users/gians/.nvm/versions/node/v18.17.0/bin/node -p require.resolve(   "react-native",     {paths: [process.argv[1]]},   ) /Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native/sdks/hermes-engine
+  /Users/gians/Desktop/dev/mobile/SanthiyaPothi/node_modules/react-native/index.js
+[Hermes] Using release tarball from URL: https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.76.1/react-native-artifacts-0.76.1-hermes-ios-debug.tar.gz
+-> Fetching podspec for `react-native-blob-util` from `../node_modules/react-native-blob-util`
+-> Fetching podspec for `react-native-document-picker` from `../node_modules/react-native-document-picker`
+-> Fetching podspec for `react-native-pdf` from `../node_modules/react-native-pdf`
+-> Fetching podspec for `react-native-restart` from `../node_modules/react-native-restart`
+-> Fetching podspec for `react-native-safe-area-context` from `../node_modules/react-native-safe-area-context`
+
+Resolving dependencies of `Podfile`
+  CDN: trunk Relative path: CocoaPods-version.yml exists! Returning local because checking is only performed in repo update
+  CDN: trunk Relative path: all_pods_versions_a_9_3.txt exists! Returning local because checking is only performed in repo update
+  CDN: trunk Relative path: Specs/a/9/3/SocketRocket/0.7.1/SocketRocket.podspec.json exists! Returning local because checking is only performed in repo update
+  CDN: trunk Relative path: all_pods_versions_5_4_e.txt exists! Returning local because checking is only performed in repo update
+  CDN: trunk Relative path: Specs/5/4/e/React-Codegen/0.1.0/React-Codegen.podspec.json exists! Returning local because checking is only performed in repo update
+  CDN: trunk Relative path: Specs/a/9/3/SocketRocket/0.7.1/SocketRocket.podspec.json exists! Returning local because checking is only performed in repo update
+  CDN: trunk Relative path: Specs/5/4/e/React-Codegen/0.1.0/React-Codegen.podspec.json exists! Returning local because checking is only performed in repo update
+
+Comparing resolved specification to the sandbox manifest
+  A DoubleConversion
+  A FBLazyVector
+  A RCT-Folly
+  A RCTDeprecation
+  A RCTRequired
+  A RCTTypeSafety
+  A RNCAsyncStorage
+  A RNCClipboard
+  A RNCPicker
+  A RNFS
+  A RNGestureHandler
+  A RNReanimated
+  A RNScreens
+  A React
+  A React-Codegen
+  A React-Core
+  A React-CoreModules
+  A React-Fabric
+  A React-FabricComponents
+  A React-FabricImage
+  A React-ImageManager
+  A React-Mapbuffer
+  A React-NativeModulesApple
+  A React-RCTActionSheet
+  A React-RCTAnimation
+  A React-RCTAppDelegate
+  A React-RCTBlob
+  A React-RCTFabric
+  A React-RCTImage
+  A React-RCTLinking
+  A React-RCTNetwork
+  A React-RCTSettings
+  A React-RCTText
+  A React-RCTVibration
+  A React-RuntimeApple
+  A React-RuntimeCore
+  A React-RuntimeHermes
+  A React-callinvoker
+  A React-cxxreact
+  A React-debug
+  A React-defaultsnativemodule
+  A React-domnativemodule
+  A React-featureflags
+  A React-featureflagsnativemodule
+  A React-graphics
+  A React-hermes
+  A React-idlecallbacksnativemodule
+  A React-jserrorhandler
+  A React-jsi
+  A React-jsiexecutor
+  A React-jsinspector
+  A React-jsitracing
+  A React-logger
+  A React-microtasksnativemodule
+  A React-nativeconfig
+  A React-perflogger
+  A React-performancetimeline
+  A React-rendererconsistency
+  A React-rendererdebug
+  A React-rncore
+  A React-runtimeexecutor
+  A React-runtimescheduler
+  A React-timing
+  A React-utils
+  A ReactCodegen
+  A ReactCommon
+  A SocketRocket
+  A Yoga
+  A boost
+  A fmt
+  A glog
+  A hermes-engine
+  A react-native-blob-util
+  A react-native-document-picker
+  A react-native-pdf
+  A react-native-restart
+  A react-native-safe-area-context
+
+Downloading dependencies
+
+-> Installing DoubleConversion (1.1.6)
+ > Git download
+ > Git download
+     $ /usr/bin/git clone https://github.com/google/double-conversion.git /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-as78zb --template= --single-branch --depth 1 --branch v1.1.6
+  $ /usr/bin/rsync -a --exclude=.git --delete /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-as78zb/ /Users/gians/Library/Caches/CocoaPods/Pods/External/DoubleConversion/77f51e588bfe0e5c4fa6e9c580da62c6-f16ae
+ > Running prepare command
+   $ /bin/bash -c  set -e mv src double-conversion
+  > Copying DoubleConversion from `/Users/gians/Library/Caches/CocoaPods/Pods/External/DoubleConversion/77f51e588bfe0e5c4fa6e9c580da62c6-f16ae` to `Pods/DoubleConversion`
+
+-> Installing FBLazyVector (0.76.1)
+
+-> Installing RCT-Folly (2024.01.01.00)
+ > Git download
+ > Git download
+     $ /usr/bin/git clone https://github.com/facebook/folly.git /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-n0920g --template= --single-branch --depth 1 --branch v2024.01.01.00
+  $ /usr/bin/rsync -a --exclude=.git --delete /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-n0920g/ /Users/gians/Library/Caches/CocoaPods/Pods/External/RCT-Folly/fb007a32beb5800dda3e0c60ac4cde2f-bf5c0
+  > Copying RCT-Folly from `/Users/gians/Library/Caches/CocoaPods/Pods/External/RCT-Folly/fb007a32beb5800dda3e0c60ac4cde2f-bf5c0` to `Pods/RCT-Folly`
+
+-> Installing RCTDeprecation (0.76.1)
+
+-> Installing RCTRequired (0.76.1)
+
+-> Installing RCTTypeSafety (0.76.1)
+
+-> Installing RNCAsyncStorage (2.0.0)
+
+-> Installing RNCClipboard (1.14.3)
+
+-> Installing RNCPicker (2.9.0)
+
+-> Installing RNFS (2.20.0)
+
+-> Installing RNGestureHandler (2.20.2)
+
+-> Installing RNReanimated (3.16.1)
+
+-> Installing RNScreens (3.35.0)
+
+-> Installing React (0.76.1)
+
+-> Installing React-Codegen (0.1.0)
+ > Git download
+ > Git download
+     $ /usr/bin/git clone https://github.com/sjnscythe/React-Codegen.git /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-pqpdlj --template= --single-branch --depth 1 --branch 0.1.0
+  $ /usr/bin/rsync -a --exclude=.git --delete /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-pqpdlj/ /Users/gians/Library/Caches/CocoaPods/Pods/Release/React-Codegen/0.1.0-4b8b4
+  > Copying React-Codegen from `/Users/gians/Library/Caches/CocoaPods/Pods/Release/React-Codegen/0.1.0-4b8b4` to `Pods/React-Codegen`
+
+-> Installing React-Core (0.76.1)
+
+-> Installing React-CoreModules (0.76.1)
+
+-> Installing React-Fabric (0.76.1)
+
+-> Installing React-FabricComponents (0.76.1)
+
+-> Installing React-FabricImage (0.76.1)
+
+-> Installing React-ImageManager (0.76.1)
+
+-> Installing React-Mapbuffer (0.76.1)
+
+-> Installing React-NativeModulesApple (0.76.1)
+
+-> Installing React-RCTActionSheet (0.76.1)
+
+-> Installing React-RCTAnimation (0.76.1)
+
+-> Installing React-RCTAppDelegate (0.76.1)
+
+-> Installing React-RCTBlob (0.76.1)
+
+-> Installing React-RCTFabric (0.76.1)
+
+-> Installing React-RCTImage (0.76.1)
+
+-> Installing React-RCTLinking (0.76.1)
+
+-> Installing React-RCTNetwork (0.76.1)
+
+-> Installing React-RCTSettings (0.76.1)
+
+-> Installing React-RCTText (0.76.1)
+
+-> Installing React-RCTVibration (0.76.1)
+
+-> Installing React-RuntimeApple (0.76.1)
+
+-> Installing React-RuntimeCore (0.76.1)
+
+-> Installing React-RuntimeHermes (0.76.1)
+
+-> Installing React-callinvoker (0.76.1)
+
+-> Installing React-cxxreact (0.76.1)
+
+-> Installing React-debug (0.76.1)
+
+-> Installing React-defaultsnativemodule (0.76.1)
+
+-> Installing React-domnativemodule (0.76.1)
+
+-> Installing React-featureflags (0.76.1)
+
+-> Installing React-featureflagsnativemodule (0.76.1)
+
+-> Installing React-graphics (0.76.1)
+
+-> Installing React-hermes (0.76.1)
+
+-> Installing React-idlecallbacksnativemodule (0.76.1)
+
+-> Installing React-jserrorhandler (0.76.1)
+
+-> Installing React-jsi (0.76.1)
+
+-> Installing React-jsiexecutor (0.76.1)
+
+-> Installing React-jsinspector (0.76.1)
+
+-> Installing React-jsitracing (0.76.1)
+
+-> Installing React-logger (0.76.1)
+
+-> Installing React-microtasksnativemodule (0.76.1)
+
+-> Installing React-nativeconfig (0.76.1)
+
+-> Installing React-perflogger (0.76.1)
+
+-> Installing React-performancetimeline (0.76.1)
+
+-> Installing React-rendererconsistency (0.76.1)
+
+-> Installing React-rendererdebug (0.76.1)
+
+-> Installing React-rncore (0.76.1)
+
+-> Installing React-runtimeexecutor (0.76.1)
+
+-> Installing React-runtimescheduler (0.76.1)
+
+-> Installing React-timing (0.76.1)
+
+-> Installing React-utils (0.76.1)
+
+-> Installing ReactCodegen (0.76.1)
+
+-> Installing ReactCommon (0.76.1)
+
+-> Installing SocketRocket (0.7.1)
+ > Git download
+ > Git download
+     $ /usr/bin/git clone https://github.com/facebook/SocketRocket.git /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-9ask7f --template= --single-branch --depth 1 --branch 0.7.1
+  $ /usr/bin/rsync -a --exclude=.git --delete /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-9ask7f/ /Users/gians/Library/Caches/CocoaPods/Pods/Release/SocketRocket/0.7.1-d4aab
+  > Copying SocketRocket from `/Users/gians/Library/Caches/CocoaPods/Pods/Release/SocketRocket/0.7.1-d4aab` to `Pods/SocketRocket`
+
+-> Installing Yoga (0.0.0)
+
+-> Installing boost (1.84.0)
+ > Git download
+ > Git download
+     $ /usr/bin/git clone https://github.com/react-native-community/boost-for-react-native /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-t2g4ob --template= --single-branch --depth 1 --branch v1.84.0
+  $ /usr/bin/rsync -a --exclude=.git --delete /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-t2g4ob/ /Users/gians/Library/Caches/CocoaPods/Pods/External/boost/5abf4351d19e14b47513e0fede2147e2-1dca9
+  > Copying boost from `/Users/gians/Library/Caches/CocoaPods/Pods/External/boost/5abf4351d19e14b47513e0fede2147e2-1dca9` to `Pods/boost`
+
+-> Installing fmt (9.1.0)
+ > Git download
+ > Git download
+     $ /usr/bin/git clone https://github.com/fmtlib/fmt.git /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-xtjft5 --template= --single-branch --depth 1 --branch 9.1.0
+  $ /usr/bin/rsync -a --exclude=.git --delete /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-xtjft5/ /Users/gians/Library/Caches/CocoaPods/Pods/External/fmt/ea07d964aedddd7b6ece7a21b75ee9ed-10c6e
+  > Copying fmt from `/Users/gians/Library/Caches/CocoaPods/Pods/External/fmt/ea07d964aedddd7b6ece7a21b75ee9ed-10c6e` to `Pods/fmt`
+
+-> Installing glog (0.3.5)
+ > Git download
+ > Git download
+     $ /usr/bin/git clone https://github.com/google/glog.git /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-ef02ew --template= --single-branch --depth 1 --branch v0.3.5
+  $ /usr/bin/rsync -a --exclude=.git --delete /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-ef02ew/ /Users/gians/Library/Caches/CocoaPods/Pods/External/glog/2263bd123499e5b93b5efe24871be317-08b30
+ > Running prepare command
+   $ /bin/bash -c  set -e #!/bin/bash # Copyright (c) Meta Platforms, Inc. and affiliates. # # This source code is licensed under the MIT license found in the # LICENSE file in the root directory of this source tree.  set -e  PLATFORM_NAME="${PLATFORM_NAME:-iphoneos}" CURRENT_ARCH="${CURRENT_ARCH}"  if [ -z "$CURRENT_ARCH" ] || [ "$CURRENT_ARCH" == "undefined_arch" ]; then     # Xcode 10 beta sets CURRENT_ARCH to "undefined_arch", this leads to incorrect linker arg.     # it's better to rely on platform name as fallback because architecture differs between simulator and device      if [[ "$PLATFORM_NAME" == *"simulator"* ]]; then         CURRENT_ARCH="x86_64"     else         CURRENT_ARCH="arm64"     fi fi  # @lint-ignore-every TXT2 Tab Literal if [ "$CURRENT_ARCH" == "arm64" ]; then     cat <<\EOF >>fix_glog_0.3.5_apple_silicon.patch diff --git a/config.sub b/config.sub index 1761d8b..43fa2e8 100755 --- a/config.sub +++ b/config.sub @@ -1096,6 +1096,9 @@ case $basic_machine in  		basic_machine=z8k-unknown  		os=-sim  		;; +	arm64-*) +		basic_machine=$(echo $basic_machine | sed 's/arm64/aarch64/') +		;;  	none)  		basic_machine=none-none  		os=-none EOF      patch -p1 config.sub fix_glog_0.3.5_apple_silicon.patch fi  XCRUN="$(which xcrun)" if [ -n "$XCRUN" ]; then   export CC="$(xcrun -find -sdk $PLATFORM_NAME cc) -arch $CURRENT_ARCH -isysroot $(xcrun -sdk $PLATFORM_NAME --show-sdk-path)"   export CXX="$CC" else   export CC="$CC:-$(which gcc)"   export CXX="$CXX:-$(which g++ || true)" fi export CXX="$CXX:-$CC"  # Remove automake symlink if it exists if [ -h "test-driver" ]; then     rm test-driver fi  # Manually disable gflags include to fix issue https://github.com/facebook/react-native/issues/28446 sed -i.bak -e 's/\@ac_cv_have_libgflags\@/0/' src/glog/logging.h.in && rm src/glog/logging.h.in.bak sed -i.bak -e 's/HAVE_LIB_GFLAGS/HAVE_LIB_GFLAGS_DISABLED/' src/config.h.in && rm src/config.h.in.bak  ./configure --host arm-apple-darwin  cat << EOF >> src/config.h /* Add in so we have Apple Target Conditionals */ #ifdef __APPLE__ #include <TargetConditionals.h> #include <Availability.h> #endif  /* Special configuration for ucontext */ #undef HAVE_UCONTEXT_H #undef PC_FROM_UCONTEXT #if defined(__x86_64__) #define PC_FROM_UCONTEXT uc_mcontext->__ss.__rip #elif defined(__i386__) #define PC_FROM_UCONTEXT uc_mcontext->__ss.__eip #endif EOF  # Prepare exported header include EXPORTED_INCLUDE_DIR="exported/glog" mkdir -p exported/glog cp -f src/glog/log_severity.h "$EXPORTED_INCLUDE_DIR/" cp -f src/glog/logging.h "$EXPORTED_INCLUDE_DIR/" cp -f src/glog/raw_logging.h "$EXPORTED_INCLUDE_DIR/" cp -f src/glog/stl_logging.h "$EXPORTED_INCLUDE_DIR/" cp -f src/glog/vlog_is_on.h "$EXPORTED_INCLUDE_DIR/"
+   patching file config.sub
+   checking for a BSD-compatible install... /usr/bin/install -c
+   checking whether build environment is sane... yes
+   checking for arm-apple-darwin-strip... no
+   checking for strip... strip
+   checking for a thread-safe mkdir -p... ./install-sh -c -d
+   checking for gawk... no
+   checking for mawk... no
+   checking for nawk... no
+   checking for awk... awk
+   checking whether make sets $(MAKE)... yes
+   checking whether make supports nested variables... yes
+   checking for arm-apple-darwin-gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk
+   checking whether the C compiler works... yes
+   checking for C compiler default output file name... a.out
+   checking for suffix of executables... 
+   checking whether we are cross compiling... yes
+   checking for suffix of object files... o
+   checking whether we are using the GNU C compiler... yes
+   checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk accepts -g... yes
+   checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk option to accept ISO C89... none needed
+   checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk understands -c and -o together... yes
+   checking for style of include used by make... GNU
+   checking dependency style of /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk... gcc3
+   checking how to run the C preprocessor... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk -E
+   checking whether we are using the GNU C++ compiler... yes
+   checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk accepts -g... yes
+   checking dependency style of /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk... gcc3
+   checking build system type... arm-apple-darwin24.1.0
+   checking host system type... arm-apple-darwin
+   checking how to print strings... printf
+   checking for a sed that does not truncate output... /usr/bin/sed
+   checking for grep that handles long lines and -e... /usr/bin/grep
+   checking for egrep... /usr/bin/grep -E
+   checking for fgrep... /usr/bin/grep -F
+   checking for ld used by /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+   checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) is GNU ld... no
+   checking for BSD- or MS-compatible name lister (nm)... no
+   checking for arm-apple-darwin-dumpbin... no
+   checking for arm-apple-darwin-link... no
+   checking for dumpbin... no
+   checking for link... link -dump
+   checking the name lister (nm) interface... BSD nm
+   checking whether ln -s works... yes
+   checking the maximum length of command line arguments... 786432
+   checking whether the shell understands some XSI constructs... yes
+   checking whether the shell understands "+="... yes
+   checking how to convert arm-apple-darwin24.1.0 file names to arm-apple-darwin format... func_convert_file_noop
+   checking how to convert arm-apple-darwin24.1.0 file names to toolchain format... func_convert_file_noop
+   checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld option to reload object files... -r
+   checking for arm-apple-darwin-objdump... no
+   checking for objdump... objdump
+   checking how to recognize dependent libraries... pass_all
+   checking for arm-apple-darwin-dlltool... no
+   checking for dlltool... no
+   checking how to associate runtime and link libraries... printf %s\n
+   checking for arm-apple-darwin-ar... no
+   checking for ar... ar
+   checking for archiver @FILE support... no
+   checking for arm-apple-darwin-strip... strip
+   checking for arm-apple-darwin-ranlib... no
+   checking for ranlib... ranlib
+   checking command to parse nm output from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk object... ok
+   checking for sysroot... no
+   checking for arm-apple-darwin-mt... no
+   checking for mt... no
+   checking if : is a manifest tool... no
+   checking for arm-apple-darwin-dsymutil... no
+   checking for dsymutil... dsymutil
+   checking for arm-apple-darwin-nmedit... no
+   checking for nmedit... nmedit
+   checking for arm-apple-darwin-lipo... no
+   checking for lipo... lipo
+   checking for arm-apple-darwin-otool... no
+   checking for otool... otool
+   checking for arm-apple-darwin-otool64... no
+   checking for otool64... no
+   checking for -single_module linker flag... ld: warning: -single_module is obsolete
+   no
+   checking for -exported_symbols_list linker flag... yes
+   checking for -force_load linker flag... yes
+   checking for ANSI C header files... no
+   checking for sys/types.h... yes
+   checking for sys/stat.h... yes
+   checking for stdlib.h... yes
+   checking for string.h... yes
+   checking for memory.h... yes
+   checking for strings.h... yes
+   checking for inttypes.h... yes
+   checking for stdint.h... yes
+   checking for unistd.h... yes
+   checking for dlfcn.h... yes
+   checking for objdir... .libs
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk supports -fno-rtti -fno-exceptions... yes
+   checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk option to produce PIC... -fno-common -DPIC
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk PIC flag -fno-common -DPIC works... yes
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk static flag -static works... no
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk supports -c -o file.o... yes
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk supports -c -o file.o... (cached) yes
+   checking whether the /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+   checking dynamic linker characteristics... darwin dyld
+   checking how to hardcode library paths into programs... immediate
+   checking whether stripping libraries is possible... yes
+   checking if libtool supports shared libraries... yes
+   checking whether to build shared libraries... yes
+   checking whether to build static libraries... yes
+   checking how to run the C++ preprocessor... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk -E
+   checking for ld used by /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+   checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) is GNU ld... no
+   checking whether the /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+   checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk option to produce PIC... -fno-common -DPIC
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk PIC flag -fno-common -DPIC works... yes
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk static flag -static works... no
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk supports -c -o file.o... yes
+   checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk supports -c -o file.o... (cached) yes
+   checking whether the /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk:-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) supports shared libraries... yes
+   checking dynamic linker characteristics... darwin dyld
+   checking how to hardcode library paths into programs... immediate
+   checking for ANSI C header files... (cached) no
+   checking for stdint.h... (cached) yes
+   checking for sys/types.h... (cached) yes
+   checking for inttypes.h... (cached) yes
+   checking for unistd.h... (cached) yes
+   checking syscall.h usability... no
+   checking syscall.h presence... no
+   checking for syscall.h... no
+   checking sys/syscall.h usability... yes
+   checking sys/syscall.h presence... yes
+   checking for sys/syscall.h... yes
+   checking execinfo.h usability... yes
+   checking execinfo.h presence... yes
+   checking for execinfo.h... yes
+   checking libunwind.h usability... yes
+   checking libunwind.h presence... yes
+   checking for libunwind.h... yes
+   checking ucontext.h usability... no
+   checking ucontext.h presence... no
+   checking for ucontext.h... no
+   checking sys/utsname.h usability... yes
+   checking sys/utsname.h presence... yes
+   checking for sys/utsname.h... yes
+   checking pwd.h usability... yes
+   checking pwd.h presence... yes
+   checking for pwd.h... yes
+   checking syslog.h usability... yes
+   checking syslog.h presence... yes
+   checking for syslog.h... yes
+   checking sys/time.h usability... yes
+   checking sys/time.h presence... yes
+   checking for sys/time.h... yes
+   checking glob.h usability... yes
+   checking glob.h presence... yes
+   checking for glob.h... yes
+   checking unwind.h usability... yes
+   checking unwind.h presence... yes
+   checking for unwind.h... yes
+   checking windows.h usability... no
+   checking windows.h presence... no
+   checking for windows.h... no
+   checking size of void *... 8
+   checking for uint16_t... yes
+   checking for u_int16_t... yes
+   checking for __uint16... no
+   checking for sigaltstack... yes
+   checking for sigaction... yes
+   checking for dladdr... yes
+   checking for fcntl... yes
+   checking for pread... yes
+   checking for pwrite... yes
+   checking for __attribute__... yes
+   checking for __builtin_expect... yes
+   checking for __sync_val_compare_and_swap... yes
+   checking for the pthreads library -lpthreads... no
+   checking whether pthreads work without any flags... yes
+   checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+   checking if more special flags are required for pthreads... -D_THREAD_SAFE
+   checking whether to check for GCC pthread/shared inconsistencies... no
+   checking for pthread_self in -lpthread... yes
+   checking for main in -lgflags... no
+   checking for gtest-config... no
+   checking for main in -lgtest... no
+   checking for backtrace in -lunwind... no
+   checking support for pthread_rwlock_* functions... yes
+   checking whether the compiler implements namespaces... yes
+   checking what namespace STL code is in... std
+   checking whether compiler supports using ::operator<<... 1
+   checking for ucontext.h... (cached) no
+   checking sys/ucontext.h usability... yes
+   checking sys/ucontext.h presence... yes
+   checking for sys/ucontext.h... yes
+   checking how to access the program counter from a struct ucontext... checking that generated files are newer than configure... done
+   configure: creating ./config.status
+   config.status: creating Makefile
+   config.status: creating src/glog/logging.h
+   config.status: creating src/glog/raw_logging.h
+   config.status: creating src/glog/vlog_is_on.h
+   config.status: creating src/glog/stl_logging.h
+   config.status: creating libglog.pc
+   config.status: creating src/config.h
+   config.status: executing depfiles commands
+   config.status: executing libtool commands
+  > Copying glog from `/Users/gians/Library/Caches/CocoaPods/Pods/External/glog/2263bd123499e5b93b5efe24871be317-08b30` to `Pods/glog`
+
+-> Installing hermes-engine (0.76.1)
+ > Http download
+   $ /usr/bin/curl -f -L -o /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-2chvr1/file.tgz https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.76.1/react-native-artifacts-0.76.1-hermes-ios-debug.tar.gz --create-dirs --netrc-optional --retry 2 -A 'CocoaPods/1.16.2 cocoapods-downloader/2.1'
+   $ /usr/bin/tar xf /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-2chvr1/file.tgz -C /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-2chvr1
+  $ /usr/bin/rsync -a --exclude=.git --delete /var/folders/0b/gmts7r4157b8r5wn98ddw8s40000gn/T/d20241105-40311-2chvr1/ /Users/gians/Library/Caches/CocoaPods/Pods/External/hermes-engine/c63fba4c40c9034f1f73010339640004-46f1f
+  > Copying hermes-engine from `/Users/gians/Library/Caches/CocoaPods/Pods/External/hermes-engine/c63fba4c40c9034f1f73010339640004-46f1f` to `Pods/hermes-engine`
+
+-> Installing react-native-blob-util (0.19.11)
+
+-> Installing react-native-document-picker (9.3.1)
+
+-> Installing react-native-pdf (6.7.1)
+
+-> Installing react-native-restart (0.0.27)
+
+-> Installing react-native-safe-area-context (4.12.0)
+  - Running pre install hooks
+  - Running pre integrate hooks
+
+Generating Pods project
+  - Creating Pods project
+  - Installing files into Pods project
+    - Adding source files
+    - Adding frameworks
+    - Adding libraries
+    - Adding resources
+    - Adding development pod helper files
+    - Linking headers
+  - Installing Pod Targets
+    - Installing target `DoubleConversion` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/DoubleConversion/DoubleConversion.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/DoubleConversion/DoubleConversion-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/DoubleConversion/DoubleConversion-dummy.m`
+    - Installing target `FBLazyVector` iOS 15.1
+    - Installing target `RCT-Folly` iOS 15.1
+      - Generating Info.plist file at `Pods/Target Support Files/RCT-Folly/ResourceBundle-RCT-Folly_privacy-RCT-Folly-Info.plist`
+      - Generating module map file at `Pods/Target Support Files/RCT-Folly/RCT-Folly.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/RCT-Folly/RCT-Folly-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/RCT-Folly/RCT-Folly-dummy.m`
+    - Installing target `RCTDeprecation` iOS 4.3
+      - Generating module map file at `Pods/Target Support Files/RCTDeprecation/RCTDeprecation.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/RCTDeprecation/RCTDeprecation-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/RCTDeprecation/RCTDeprecation-dummy.m`
+    - Installing target `RCTRequired` iOS 15.1
+    - Installing target `RCTTypeSafety` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/RCTTypeSafety/RCTTypeSafety.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/RCTTypeSafety/RCTTypeSafety-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/RCTTypeSafety/RCTTypeSafety-dummy.m`
+    - Installing target `RNCAsyncStorage` iOS 13.4
+      - Generating Info.plist file at `Pods/Target Support Files/RNCAsyncStorage/ResourceBundle-RNCAsyncStorage_resources-RNCAsyncStorage-Info.plist`
+      - Generating dummy source at `Pods/Target Support Files/RNCAsyncStorage/RNCAsyncStorage-dummy.m`
+    - Installing target `RNCClipboard` iOS 11.0
+      - Generating dummy source at `Pods/Target Support Files/RNCClipboard/RNCClipboard-dummy.m`
+    - Installing target `RNCPicker` iOS 11.0
+      - Generating dummy source at `Pods/Target Support Files/RNCPicker/RNCPicker-dummy.m`
+    - Installing target `RNFS` iOS 8.0
+      - Generating dummy source at `Pods/Target Support Files/RNFS/RNFS-dummy.m`
+    - Installing target `RNGestureHandler` iOS 11.0
+      - Generating dummy source at `Pods/Target Support Files/RNGestureHandler/RNGestureHandler-dummy.m`
+    - Installing target `RNReanimated` iOS 13.4
+      - Generating module map file at `Pods/Target Support Files/RNReanimated/RNReanimated.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/RNReanimated/RNReanimated-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/RNReanimated/RNReanimated-dummy.m`
+    - Installing target `RNScreens` iOS 11.0
+      - Generating dummy source at `Pods/Target Support Files/RNScreens/RNScreens-dummy.m`
+    - Installing target `React` iOS 15.1
+    - Installing target `React-Codegen` iOS 13.0
+      - Generating module map file at `Pods/Target Support Files/React-Codegen/React-Codegen.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-Codegen/React-Codegen-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-Codegen/React-Codegen-dummy.m`
+    - Installing target `React-Core` iOS 15.1
+      - Generating Info.plist file at `Pods/Target Support Files/React-Core/ResourceBundle-React-Core_privacy-React-Core-Info.plist`
+      - Generating module map file at `Pods/Target Support Files/React-Core/React-Core.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-Core/React-Core-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-Core/React-Core-dummy.m`
+    - Installing target `React-CoreModules` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-CoreModules/React-CoreModules-dummy.m`
+    - Installing target `React-Fabric` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-Fabric/React-Fabric.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-Fabric/React-Fabric-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-Fabric/React-Fabric-dummy.m`
+    - Installing target `React-FabricComponents` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-FabricComponents/React-FabricComponents.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-FabricComponents/React-FabricComponents-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-FabricComponents/React-FabricComponents-dummy.m`
+    - Installing target `React-FabricImage` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-FabricImage/React-FabricImage-dummy.m`
+    - Installing target `React-ImageManager` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-ImageManager/React-ImageManager.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-ImageManager/React-ImageManager-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-ImageManager/React-ImageManager-dummy.m`
+    - Installing target `React-Mapbuffer` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-Mapbuffer/React-Mapbuffer-dummy.m`
+    - Installing target `React-NativeModulesApple` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-NativeModulesApple/React-NativeModulesApple.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-NativeModulesApple/React-NativeModulesApple-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-NativeModulesApple/React-NativeModulesApple-dummy.m`
+    - Installing target `React-RCTActionSheet` iOS 15.1
+    - Installing target `React-RCTAnimation` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RCTAnimation/React-RCTAnimation-dummy.m`
+    - Installing target `React-RCTAppDelegate` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-RCTAppDelegate/React-RCTAppDelegate.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-RCTAppDelegate/React-RCTAppDelegate-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-RCTAppDelegate/React-RCTAppDelegate-dummy.m`
+    - Installing target `React-RCTBlob` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RCTBlob/React-RCTBlob-dummy.m`
+    - Installing target `React-RCTFabric` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-RCTFabric/React-RCTFabric.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-RCTFabric/React-RCTFabric-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-RCTFabric/React-RCTFabric-dummy.m`
+    - Installing target `React-RCTImage` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RCTImage/React-RCTImage-dummy.m`
+    - Installing target `React-RCTLinking` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RCTLinking/React-RCTLinking-dummy.m`
+    - Installing target `React-RCTNetwork` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RCTNetwork/React-RCTNetwork-dummy.m`
+    - Installing target `React-RCTSettings` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RCTSettings/React-RCTSettings-dummy.m`
+    - Installing target `React-RCTText` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RCTText/React-RCTText-dummy.m`
+    - Installing target `React-RCTVibration` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RCTVibration/React-RCTVibration-dummy.m`
+    - Installing target `React-RuntimeApple` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RuntimeApple/React-RuntimeApple-dummy.m`
+    - Installing target `React-RuntimeCore` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RuntimeCore/React-RuntimeCore-dummy.m`
+    - Installing target `React-RuntimeHermes` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-RuntimeHermes/React-RuntimeHermes-dummy.m`
+    - Installing target `React-callinvoker` iOS 15.1
+    - Installing target `React-cxxreact` iOS 15.1
+      - Generating Info.plist file at `Pods/Target Support Files/React-cxxreact/ResourceBundle-React-cxxreact_privacy-React-cxxreact-Info.plist`
+      - Generating dummy source at `Pods/Target Support Files/React-cxxreact/React-cxxreact-dummy.m`
+    - Installing target `React-debug` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-debug/React-debug.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-debug/React-debug-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-debug/React-debug-dummy.m`
+    - Installing target `React-defaultsnativemodule` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-defaultsnativemodule/React-defaultsnativemodule.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-defaultsnativemodule/React-defaultsnativemodule-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-defaultsnativemodule/React-defaultsnativemodule-dummy.m`
+    - Installing target `React-domnativemodule` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-domnativemodule/React-domnativemodule.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-domnativemodule/React-domnativemodule-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-domnativemodule/React-domnativemodule-dummy.m`
+    - Installing target `React-featureflags` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-featureflags/React-featureflags.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-featureflags/React-featureflags-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-featureflags/React-featureflags-dummy.m`
+    - Installing target `React-featureflagsnativemodule` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-featureflagsnativemodule/React-featureflagsnativemodule.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-featureflagsnativemodule/React-featureflagsnativemodule-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-featureflagsnativemodule/React-featureflagsnativemodule-dummy.m`
+    - Installing target `React-graphics` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-graphics/React-graphics.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-graphics/React-graphics-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-graphics/React-graphics-dummy.m`
+    - Installing target `React-hermes` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-hermes/React-hermes-dummy.m`
+    - Installing target `React-idlecallbacksnativemodule` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-idlecallbacksnativemodule/React-idlecallbacksnativemodule.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-idlecallbacksnativemodule/React-idlecallbacksnativemodule-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-idlecallbacksnativemodule/React-idlecallbacksnativemodule-dummy.m`
+    - Installing target `React-jserrorhandler` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-jserrorhandler/React-jserrorhandler-dummy.m`
+    - Installing target `React-jsi` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-jsi/React-jsi.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-jsi/React-jsi-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-jsi/React-jsi-dummy.m`
+    - Installing target `React-jsiexecutor` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-jsiexecutor/React-jsiexecutor-dummy.m`
+    - Installing target `React-jsinspector` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-jsinspector/React-jsinspector.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-jsinspector/React-jsinspector-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-jsinspector/React-jsinspector-dummy.m`
+    - Installing target `React-jsitracing` iOS 15.1
+    - Installing target `React-logger` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-logger/React-logger-dummy.m`
+    - Installing target `React-microtasksnativemodule` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-microtasksnativemodule/React-microtasksnativemodule.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-microtasksnativemodule/React-microtasksnativemodule-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-microtasksnativemodule/React-microtasksnativemodule-dummy.m`
+    - Installing target `React-nativeconfig` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-nativeconfig/React-nativeconfig-dummy.m`
+    - Installing target `React-perflogger` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-perflogger/React-perflogger-dummy.m`
+    - Installing target `React-performancetimeline` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-performancetimeline/React-performancetimeline-dummy.m`
+    - Installing target `React-rendererconsistency` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-rendererconsistency/React-rendererconsistency-dummy.m`
+    - Installing target `React-rendererdebug` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-rendererdebug/React-rendererdebug.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-rendererdebug/React-rendererdebug-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-rendererdebug/React-rendererdebug-dummy.m`
+    - Installing target `React-rncore` iOS 15.1
+    - Installing target `React-runtimeexecutor` iOS 15.1
+    - Installing target `React-runtimescheduler` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/React-runtimescheduler/React-runtimescheduler-dummy.m`
+    - Installing target `React-timing` iOS 15.1
+    - Installing target `React-utils` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/React-utils/React-utils.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/React-utils/React-utils-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/React-utils/React-utils-dummy.m`
+    - Installing target `ReactCodegen` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/ReactCodegen/ReactCodegen.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/ReactCodegen/ReactCodegen-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/ReactCodegen/ReactCodegen-dummy.m`
+    - Installing target `ReactCommon` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/ReactCommon/ReactCommon.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/ReactCommon/ReactCommon-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/ReactCommon/ReactCommon-dummy.m`
+    - Installing target `SocketRocket` iOS 11.0
+      - Generating dummy source at `Pods/Target Support Files/SocketRocket/SocketRocket-dummy.m`
+    - Installing target `Yoga` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/Yoga/Yoga.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/Yoga/Yoga-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/Yoga/Yoga-dummy.m`
+    - Installing target `boost` iOS 15.1
+      - Generating Info.plist file at `Pods/Target Support Files/boost/ResourceBundle-boost_privacy-boost-Info.plist`
+    - Installing target `fmt` iOS 15.1
+      - Generating dummy source at `Pods/Target Support Files/fmt/fmt-dummy.m`
+    - Installing target `glog` iOS 15.1
+      - Generating Info.plist file at `Pods/Target Support Files/glog/ResourceBundle-glog_privacy-glog-Info.plist`
+      - Generating module map file at `Pods/Target Support Files/glog/glog.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/glog/glog-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/glog/glog-dummy.m`
+    - Installing target `hermes-engine` iOS 15.1
+    - Installing target `react-native-blob-util` iOS 11.0
+      - Generating Info.plist file at `Pods/Target Support Files/react-native-blob-util/ResourceBundle-ReactNativeBlobUtilPrivacyInfo-react-native-blob-util-Info.plist`
+      - Generating dummy source at `Pods/Target Support Files/react-native-blob-util/react-native-blob-util-dummy.m`
+    - Installing target `react-native-document-picker` iOS 11.0
+      - Generating dummy source at `Pods/Target Support Files/react-native-document-picker/react-native-document-picker-dummy.m`
+    - Installing target `react-native-pdf` iOS 11.0
+      - Generating dummy source at `Pods/Target Support Files/react-native-pdf/react-native-pdf-dummy.m`
+    - Installing target `react-native-restart` iOS 9.0
+      - Generating dummy source at `Pods/Target Support Files/react-native-restart/react-native-restart-dummy.m`
+    - Installing target `react-native-safe-area-context` iOS 12.4
+      - Generating dummy source at `Pods/Target Support Files/react-native-safe-area-context/react-native-safe-area-context-dummy.m`
+  - Installing Aggregate Targets
+    - Installing target `Pods-SanthiyaPothi` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/Pods-SanthiyaPothi/Pods-SanthiyaPothi-dummy.m`
+    - Installing target `Pods-SanthiyaPothi-SanthiyaPothiTests` iOS 15.1
+      - Generating module map file at `Pods/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests.modulemap`
+      - Generating umbrella header at `Pods/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-umbrella.h`
+      - Generating dummy source at `Pods/Target Support Files/Pods-SanthiyaPothi-SanthiyaPothiTests/Pods-SanthiyaPothi-SanthiyaPothiTests-dummy.m`
+  - Integrating targets
+
+Integrating target `React-Fabric`
+    Adding Build Phase '[CP-User] [RN]Check rncore' to project.
+
+Integrating target `React-FabricComponents`
+    Adding Build Phase '[CP-User] [RN]Check rncore' to project.
+
+Integrating target `ReactCodegen`
+    Adding Build Phase '[CP-User] Generate Specs' to project.
+
+Integrating target `hermes-engine`
+    Adding Build Phase '[CP] Copy XCFrameworks' to project.
+    Adding Build Phase '[CP-User] [Hermes] Replace Hermes for the right configuration, if needed' to project.
+  - Stabilizing target UUIDs
+  - Running post install hooks
+Setting USE_HERMES build settings
+Setting REACT_NATIVE_PATH build settings
+Setting SWIFT_ACTIVE_COMPILATION_CONDITIONS build settings
+[Ccache]: Removing Ccache from CC, LD, CXX & LDPLUSPLUS build settings
+[SPM] Cleaning old SPM dependencies from Pods project
+[SPM] Adding SPM dependencies to Pods project
+[Privacy Manifest Aggregation] Appending aggregated reasons to existing PrivacyInfo.xcprivacy file.
+[Privacy Manifest Aggregation] Reading .xcprivacy files to aggregate all used Required Reason APIs.
+Setting CLANG_CXX_LANGUAGE_STANDARD to c++20 on /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/SanthiyaPothi.xcodeproj
+Pod install took 33 [s] to run
+    - Podfile
+  - Writing Xcode project file to `Pods/Pods.xcodeproj`
+  Cleaning up sandbox directory
+
+Integrating client project
+
+Integrating target `Pods-SanthiyaPothi` (`SanthiyaPothi.xcodeproj` project)
+  Adding Build Phase '[CP] Embed Pods Frameworks' to project.
+  Adding Build Phase '[CP] Copy Pods Resources' to project.
+  Adding Build Phase '[CP] Check Pods Manifest.lock' to project.
+
+Integrating target `Pods-SanthiyaPothi-SanthiyaPothiTests` (`SanthiyaPothi.xcodeproj` project)
+  Adding Build Phase '[CP] Embed Pods Frameworks' to project.
+  Adding Build Phase '[CP] Copy Pods Resources' to project.
+  Adding Build Phase '[CP] Check Pods Manifest.lock' to project.
+  - Running post integrate hooks
+  - Writing Lockfile in `Podfile.lock`
+  - Writing Manifest in `Pods/Manifest.lock`
+  CDN: trunk Relative path: CocoaPods-version.yml exists! Returning local because checking is only performed in repo update
+
+-> Pod installation complete! There are 77 dependencies from the Podfile and 77 total pods installed.

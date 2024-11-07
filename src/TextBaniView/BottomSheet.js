@@ -1,6 +1,6 @@
 import React, {useCallback, useRef, useEffect} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Alert} from 'react-native';
-import {SwipeablePanel} from 'rn-swipeable-panel';
+// import {SwipeablePanel} from 'rn-swipeable-panel';
 import {Slider} from '@miblanchard/react-native-slider';
 import {Icon, CheckBox} from 'react-native-elements';
 import SelectDropdown from 'react-native-select-dropdown';
@@ -64,7 +64,7 @@ export default function BottomSheet({setBottomSheetOpen, bottomSheetOpen}) {
 
   return (
     <View style={styles.container}>
-      <SwipeablePanel
+      <View //SwipeablePanel
         {...panelProps}
         isActive={bottomSheetOpen}
         style={{
@@ -246,7 +246,7 @@ export default function BottomSheet({setBottomSheetOpen, bottomSheetOpen}) {
             </TouchableOpacity>
           </View>
         </View>
-      </SwipeablePanel>
+      </View>
     </View>
   );
 }

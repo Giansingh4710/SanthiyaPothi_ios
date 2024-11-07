@@ -1,4 +1,25 @@
-Xcode errors:
+After finally getting app to build for first time after like 2 weeks, got the error
+every time I tried to open the app:
+  Error:
+    https://github.com/Shopify/flash-list/issues/1221
+  Solution:
+    https://shopify.github.io/flash-list/docs/guides/manual-linking/
+
+What actually helped build:
+  Was having issues and kept generating Podfile s through AI (GPT and claude)
+  and kept getting errors
+    Most common error:
+      react-native-pdf package is getting error in file 'Optional.h':
+      ".../ios/Pods/Headers/Public/RCT-Folly/folly/Optional.h:667:10
+      'folly/experimental/coro/Coroutine.h' file not found" while using
+      react-native 0.76
+  So I used the default Podfile and messed around with the react native version
+  number and 0.74 worked. It didn't work automatically. I got the error shown
+  and the solution from the link:
+    https://stackoverflow.com/questions/76590131/error-while-build-ios-app-in-xcode-sandbox-rsync-samba-13105-deny1-file-w
+
+
+Other Xcode errors (didn't help):
   Error:
     Library 'DoubleConversion' not found
   Solution:
@@ -17,3 +38,4 @@ Xcode errors:
     /Users/gians/Desktop/dev/mobile/SanthiyaPothi/ios/Pods/glog/src/base/mutex.h:105:10 'config.h' file not found
   From:
     https://stackoverflow.com/questions/50836558/react-native-config-h-not-found
+

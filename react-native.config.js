@@ -10,10 +10,5 @@ module.exports = {
         ios: null
       }
     },
-    '@shopify/flash-list': {
-      platforms: {
-        ios: null
-      }
-    }
   }
 };
